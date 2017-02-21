@@ -19,7 +19,7 @@ name hashing:
 1 items
 0 -> true
 products:
-20 items
+18 items
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$1$$anonfun$apply$1.class
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$1.class
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$10.class
@@ -37,8 +37,6 @@ products:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$9.class
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$main$1.class
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$.class
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$fileClass$3.class
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$fileClass$4$.class
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2.class
 binary dependencies:
 8 items
@@ -67,7 +65,7 @@ inheritance internal dependencies:
 inheritance external dependencies:
 0 items
 class names:
-20 items
+18 items
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> main.scala.Test2
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> main.scala.Test2$
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> main.scala.Test2$$anonfun$1
@@ -86,19 +84,13 @@ class names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> main.scala.Test2$$anonfun$8
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> main.scala.Test2$$anonfun$9
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> main.scala.Test2$$anonfun$main$1
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> main.scala.Test2$fileClass$3
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> main.scala.Test2$fileClass$4$
 used names:
-198 items
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> &&
+163 items
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> +
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> /
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> <init>
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> ==
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> A
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> ANN
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> ANNModel
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> AbstractFunction7
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Any
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> AnyRef
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Array
@@ -117,24 +109,19 @@ used names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> FinalVector
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Function1
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Function2
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> IndexOutOfBoundsException
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Int
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Integer
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Iterable
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Iterator
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> JavaConversions
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> K
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> LOF
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Long
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> N
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> None
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Nothing
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Numeric
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Object
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Ordering
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> PairRDDFunctions
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Predef
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Product
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> R
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> RDD
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> RichDouble
@@ -142,12 +129,9 @@ used names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> SQLContext
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> ScalaRunTime
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Seq
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Serializable
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Some
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> SparkConf
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> SparkContext
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> SparseVector
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Statics
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> StorageLevel
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> String
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> StringOps
@@ -156,16 +140,10 @@ used names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> T0
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> T1
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> T2
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> T3
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> T4
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> T5
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> T6
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> T7
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Test2
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> That
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> TraversableOnce
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Tuple2
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Tuple7
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> U
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> Unit
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> V
@@ -178,7 +156,6 @@ used names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> _$6
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> _1
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> _2
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> _toString
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> acc
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> acc1
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> acc2
@@ -200,13 +177,10 @@ used names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> density
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> df
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> dimension
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> doubleHash
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> doubleWrapper
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> eq
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> fileClass
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> fileName
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> finalizeHash
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> first
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> flat
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> flatMapValues
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> foreach
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> format
@@ -232,7 +206,7 @@ used names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> materializeClassTag
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> math
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> max
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> mix
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> minPoints
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> mllib
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> neighborWithReach
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> neighbors
@@ -249,7 +223,6 @@ used names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> refArrayOps
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> result
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> row
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> runtime
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> sc
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> scala
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> setAppName
@@ -258,8 +231,6 @@ used names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> setSignatureLength
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> setTables
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> size
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> something
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> somethingNew
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> spark
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> sql
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> sqlContext
@@ -269,50 +240,38 @@ used names:
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> toDouble
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> toSeq
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> toSparse
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> toString
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> train
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> typedProductIterator
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> v
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> values
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> wrapDoubleArray
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x$1
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x$2
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x1
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x2
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x3
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x4
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x5
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x6
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> x7
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> xs
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> zipWithIndex
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> ||
 product stamps:
-20 items
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$1$$anonfun$apply$1.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$1.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$10.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$11.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$12.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$13.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$2.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$3.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$4$$anonfun$apply$2.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$4.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$5.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$6.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$7.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$8.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$9.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$main$1.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$fileClass$3.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$fileClass$4$.class -> lastModified(1487690854000)
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2.class -> lastModified(1487690854000)
+18 items
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$1$$anonfun$apply$1.class -> lastModified(1487693379000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$1.class -> lastModified(1487693379000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$10.class -> lastModified(1487693379000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$11.class -> lastModified(1487693379000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$12.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$13.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$2.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$3.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$4$$anonfun$apply$2.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$4.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$5.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$6.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$7.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$8.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$9.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$$anonfun$main$1.class -> lastModified(1487693380000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2$.class -> lastModified(1487693379000)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes/main/scala/Test2.class -> lastModified(1487693379000)
 source stamps:
 2 items
-/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> hash(ce3d8fa405be96483fd40d877c2435b389c77d6a)
+/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> hash(ff88c3f2e06416bfe1cc465ef98e36862ae4d17a)
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/TestMain.scala -> hash(3bcc7320b4cb8c65481ff1f0745bc7f9be96b3dc)
 binary stamps:
 8 items
@@ -330,14 +289,14 @@ class names:
 /Users/hassan/.ivy2/cache/com.github.karlhigley/spark-neighbors_2.10/jars/spark-neighbors_2.10-0.2.2.jar -> com.github.karlhigley.spark.neighbors.ANN
 /Users/hassan/.ivy2/cache/com.opencsv/opencsv/jars/opencsv-3.9.jar -> com.opencsv.CSVReader
 /Users/hassan/.ivy2/cache/org.apache.spark/spark-catalyst_2.10/jars/spark-catalyst_2.10-1.6.0.jar -> org.apache.spark.sql.Row
-/Users/hassan/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-1.6.0.jar -> org.apache.spark.SparkConf
-/Users/hassan/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-1.6.0.jar -> org.apache.spark.mllib.linalg.Vectors$
+/Users/hassan/.ivy2/cache/org.apache.spark/spark-core_2.10/jars/spark-core_2.10-1.6.0.jar -> org.apache.spark.rdd.PairRDDFunctions
+/Users/hassan/.ivy2/cache/org.apache.spark/spark-mllib_2.10/jars/spark-mllib_2.10-1.6.0.jar -> org.apache.spark.mllib.linalg.Vector
 /Users/hassan/.ivy2/cache/org.apache.spark/spark-sql_2.10/jars/spark-sql_2.10-1.6.0.jar -> org.apache.spark.sql.SQLContext
-/Users/hassan/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar -> scala.runtime.AbstractFunction7
+/Users/hassan/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.5.jar -> scala.runtime.ScalaNumberProxy
 internal apis:
 2 items
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/Test2.scala -> 
-rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwmu+NKwAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAac3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwJSALenQABm5vdGlmeXNxAH4ADIj0MlB0AAR3YWl0c3EAfgAMAkyBsHQADSRhc0luc3RhbmNlT2ZzcQB+AAzsILjodAAGZXF1YWxzc3EAfgAM1YsarnQADGFzSW5zdGFuY2VPZnNxAH4ADLiuk5N0AAxzeW5jaHJvbml6ZWRzcQB+AAwCljmndAANJGlzSW5zdGFuY2VPZnNxAH4ADCHEJZN0AAZnZXRMT0ZzcQB+AAyfQTPpdAAEbWFpbnNxAH4ADAY95Lt0AAlub3RpZnlBbGxzcQB+AAy1aAe3dAAMaXNJbnN0YW5jZU9mc3EAfgAM8xg1wnQAEGdldFJlYWNoRGlzdGFuY2VzcQB+AAyLuZrLdAACPT1zcQB+AAzwQu7RdAAHZGVuc2l0eXNxAH4ADMrIF8J0AAVjbG9uZXNxAH4ADK0b2Mp0ABVnZXRMb2NhbFJlYWNoRGlzdGFuY2VzcQB+AAyQovjYdAAIdG9TdHJpbmdzcQB+AAzNjau6dAACIT1zcQB+AAydMahCdAAFVGVzdDJzcQB+AAx+3C49dAAIZ2V0Q2xhc3NzcQB+AAy4OCnGdAACbmVzcQB+AAwrsWTUdAACZXFzcQB+AAzN5BU9dAACIyNzcQB+AAyztvZIdAAIZmluYWxpemVzcQB+AAw1o9G5dAAIaGFzaENvZGVzcQB+AAxe/Sf4dAANZ2V0Tk5laWdoYm9yc3NyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEt4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0ABBtYWluLnNjYWxhLlRlc3QydXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBjc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEtMAAlpbmhlcml0ZWRxAH4AS0wAB3BhcmVudHNxAH4AS3hxAH4AaHNxAH4AY3VxAH4ARgAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4ATHEAfgBVdXEAfgBWAAAAAHNxAH4AWABxAH4AH3VxAH4AWwAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBndAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AZ3NyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4Ag3VyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AHB4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AF50AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AHdbAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AGdzcQB+AHZ0AAVBcnJheXEAfgB8dXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AHZ0AAZTdHJpbmdzcQB+AHpzcQB+AH11cQB+AIAAAAADc3EAfgCCdAAEamF2YXNxAH4AgnQABGxhbmdxAH4Ah3NxAH4AY3VxAH4ARgAAAABzcQB+AGN1cQB+AJsAAAACc3EAfgB2dAAGT2JqZWN0cQB+AJ9zcQB+AHZ0AANBbnlxAH4AfHVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAACc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHEAfgAfc3EAfgCwdAAKbWFpbi5zY2FsYXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmFI27R1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdABbL1VzZXJzL2hhc3Nhbi9Eb2N1bWVudHMvU3R1ZGllcy9UaGVzaXMvV29yayBTcGFjZXMvU2NhbGEvU0JUU2NhbGEvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFM49j6QFvpZIP9QNh3wkNbOJx31q
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwT/5PgQAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAac3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwJSALenQABm5vdGlmeXNxAH4ADIj0MlB0AAR3YWl0c3EAfgAMAkyBsHQADSRhc0luc3RhbmNlT2ZzcQB+AAzsILjodAAGZXF1YWxzc3EAfgAM1YsarnQADGFzSW5zdGFuY2VPZnNxAH4ADLiuk5N0AAxzeW5jaHJvbml6ZWRzcQB+AAwCljmndAANJGlzSW5zdGFuY2VPZnNxAH4ADCHEJZN0AAZnZXRMT0ZzcQB+AAyfQTPpdAAEbWFpbnNxAH4ADAY95Lt0AAlub3RpZnlBbGxzcQB+AAy1aAe3dAAMaXNJbnN0YW5jZU9mc3EAfgAMinO9snQAEGdldFJlYWNoRGlzdGFuY2VzcQB+AAyLuZrLdAACPT1zcQB+AAzwQu7RdAAHZGVuc2l0eXNxAH4ADMrIF8J0AAVjbG9uZXNxAH4ADK0b2Mp0ABVnZXRMb2NhbFJlYWNoRGlzdGFuY2VzcQB+AAyQovjYdAAIdG9TdHJpbmdzcQB+AAzNjau6dAACIT1zcQB+AAydMahCdAAFVGVzdDJzcQB+AAx+3C49dAAIZ2V0Q2xhc3NzcQB+AAy4OCnGdAACbmVzcQB+AAwrsWTUdAACZXFzcQB+AAzN5BU9dAACIyNzcQB+AAyztvZIdAAIZmluYWxpemVzcQB+AAw1o9G5dAAIaGFzaENvZGVzcQB+AAxyDF97dAANZ2V0Tk5laWdoYm9yc3NyABN4c2J0aS5hcGkuU291cmNlQVBJuV6n+SkjOKQCAAJbAAtkZWZpbml0aW9uc3QAF1tMeHNidGkvYXBpL0RlZmluaXRpb247WwAIcGFja2FnZXN0ABRbTHhzYnRpL2FwaS9QYWNrYWdlO3hwdXIAF1tMeHNidGkuYXBpLkRlZmluaXRpb247iMlc57TjXg4CAAB4cAAAAAFzcgATeHNidGkuYXBpLkNsYXNzTGlrZYM0HKHfsJdsAgAETAAOZGVmaW5pdGlvblR5cGV0ABpMeHNidGkvYXBpL0RlZmluaXRpb25UeXBlO1sAEHNhdmVkQW5ub3RhdGlvbnN0ABNbTGphdmEvbGFuZy9TdHJpbmc7TAAIc2VsZlR5cGV0ABBMeHNidGkvYXBpL0xhenk7TAAJc3RydWN0dXJlcQB+AEt4cgAheHNidGkuYXBpLlBhcmFtZXRlcml6ZWREZWZpbml0aW9u+RFusdVQPOICAAFbAA50eXBlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1R5cGVQYXJhbWV0ZXI7eHIAFHhzYnRpLmFwaS5EZWZpbml0aW9uhyob6HFC40YCAARMAAZhY2Nlc3N0ABJMeHNidGkvYXBpL0FjY2VzcztbAAthbm5vdGF0aW9uc3QAF1tMeHNidGkvYXBpL0Fubm90YXRpb247TAAJbW9kaWZpZXJzdAAVTHhzYnRpL2FwaS9Nb2RpZmllcnM7TAAEbmFtZXEAfgANeHBzcgAQeHNidGkuYXBpLlB1YmxpY7pYPa5sLWBCAgAAeHIAEHhzYnRpLmFwaS5BY2Nlc3PdYpr4HWMxSAIAAHhwdXIAF1tMeHNidGkuYXBpLkFubm90YXRpb24765frGRD2jUgCAAB4cAAAAABzcgATeHNidGkuYXBpLk1vZGlmaWVyc5fnYdwTJnuzAgABQgAFZmxhZ3N4cAB0ABBtYWluLnNjYWxhLlRlc3QydXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAHNyACF4c2J0aS5hcGkuQWJzdHJhY3RMYXp5JFN0cmljdExhenkNZhxrKRYquAIAAUwABXZhbHVldAASTGphdmEvbGFuZy9PYmplY3Q7eHBzcgATeHNidGkuYXBpLkVtcHR5VHlwZbz9nkZJO4kkAgAAeHIAFHhzYnRpLmFwaS5TaW1wbGVUeXBlcnhiiCEjv0ACAAB4cgAOeHNidGkuYXBpLlR5cGU/atkhFkmqygIAAHhwc3EAfgBjc3IAE3hzYnRpLmFwaS5TdHJ1Y3R1cmWpqvmAk2/YAAIAA0wACGRlY2xhcmVkcQB+AEtMAAlpbmhlcml0ZWRxAH4AS0wAB3BhcmVudHNxAH4AS3hxAH4AaHNxAH4AY3VxAH4ARgAAAAFzcgANeHNidGkuYXBpLkRlZlK+n+J8tDZpAgACTAAKcmV0dXJuVHlwZXQAEEx4c2J0aS9hcGkvVHlwZTtbAA92YWx1ZVBhcmFtZXRlcnN0ABpbTHhzYnRpL2FwaS9QYXJhbWV0ZXJMaXN0O3hxAH4ATHEAfgBVdXEAfgBWAAAAAHNxAH4AWABxAH4AH3VxAH4AWwAAAABzcgAUeHNidGkuYXBpLlByb2plY3Rpb27z0o1U6UWkLQIAAkwAAmlkcQB+AA1MAAZwcmVmaXh0ABZMeHNidGkvYXBpL1NpbXBsZVR5cGU7eHEAfgBndAAEVW5pdHNyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AZ3NyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AA14cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4Ag3VyABpbTHhzYnRpLmFwaS5QYXJhbWV0ZXJMaXN0O/XTOh3ys3DuAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5QYXJhbWV0ZXJMaXN01sW8HGRJdOMCAAJaAAppc0ltcGxpY2l0WwAKcGFyYW1ldGVyc3QAHFtMeHNidGkvYXBpL01ldGhvZFBhcmFtZXRlcjt4cAB1cgAcW0x4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyO8+4xV2l3bVtAgAAeHAAAAABc3IAGXhzYnRpLmFwaS5NZXRob2RQYXJhbWV0ZXIfRa4X00mw6gIABFoACmhhc0RlZmF1bHRMAAhtb2RpZmllcnQAHUx4c2J0aS9hcGkvUGFyYW1ldGVyTW9kaWZpZXI7TAAEbmFtZXEAfgANTAADdHBlcQB+AHB4cAB+cgAbeHNidGkuYXBpLlBhcmFtZXRlck1vZGlmaWVyAAAAAAAAAAASAAB4cQB+AF50AAVQbGFpbnQABGFyZ3NzcgAXeHNidGkuYXBpLlBhcmFtZXRlcml6ZWQWbO5pA8m7fwIAAkwACGJhc2VUeXBlcQB+AHdbAA10eXBlQXJndW1lbnRzdAARW0x4c2J0aS9hcGkvVHlwZTt4cQB+AGdzcQB+AHZ0AAVBcnJheXEAfgB8dXIAEVtMeHNidGkuYXBpLlR5cGU7dP+lWnv56UECAAB4cAAAAAFzcQB+AHZ0AAZTdHJpbmdzcQB+AHpzcQB+AH11cQB+AIAAAAADc3EAfgCCdAAEamF2YXNxAH4AgnQABGxhbmdxAH4Ah3NxAH4AY3VxAH4ARgAAAABzcQB+AGN1cQB+AJsAAAACc3EAfgB2dAAGT2JqZWN0cQB+AJ9zcQB+AHZ0AANBbnlxAH4AfHVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAACc3IAEXhzYnRpLmFwaS5QYWNrYWdlflmP9q7OOVgCAAFMAARuYW1lcQB+AA14cHEAfgAfc3EAfgCwdAAKbWFpbi5zY2FsYXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmFvY+x1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5cQB+AA1MAA9zb3VyY2VEaXJlY3RvcnlxAH4ADXhwdABbL1VzZXJzL2hhc3Nhbi9Eb2N1bWVudHMvU3R1ZGllcy9UaGVzaXMvV29yayBTcGFjZXMvU2NhbGEvU0JUU2NhbGEvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFP+Iw/LgZBa/4cxGXvmONoYq5NF6
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/TestMain.scala -> 
 rO0ABXNyABB4c2J0aS5hcGkuU291cmNlSjH5SdlLSkQCAAdJAAdhcGlIYXNoWgAIaGFzTWFjcm9aABBoYXNQYWNrYWdlT2JqZWN0TAAYX2ludGVybmFsT25seV9uYW1lSGFzaGVzdAAkTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoZXM7TAADYXBpdAAVTHhzYnRpL2FwaS9Tb3VyY2VBUEk7TAALY29tcGlsYXRpb250ABdMeHNidGkvYXBpL0NvbXBpbGF0aW9uO1sABGhhc2h0AAJbQnhwuCFR6gAAc3IAInhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoZXNU2r6Z+tTsTAIAAlsAD2ltcGxpY2l0TWVtYmVyc3QAI1tMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2g7WwAOcmVndWxhck1lbWJlcnNxAH4AB3hwdXIAI1tMeHNidGkuYXBpLl9pbnRlcm5hbE9ubHlfTmFtZUhhc2g7SVqAtt2Wi/QCAAB4cAAAAAB1cQB+AAkAAAAAc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAHVyABRbTHhzYnRpLmFwaS5QYWNrYWdlO1sTGTdwpyehAgAAeHAAAAAAc3IAFXhzYnRpLmFwaS5Db21waWxhdGlvbu364MNq6KBCAgACSgAJc3RhcnRUaW1lWwAHb3V0cHV0c3QAGltMeHNidGkvYXBpL091dHB1dFNldHRpbmc7eHAAAAFaYA2EK3VyABpbTHhzYnRpLmFwaS5PdXRwdXRTZXR0aW5nO39qwvOnh6VCAgAAeHAAAAABc3IAF3hzYnRpLmFwaS5PdXRwdXRTZXR0aW5netmaR3T7HXsCAAJMAA9vdXRwdXREaXJlY3Rvcnl0ABJMamF2YS9sYW5nL1N0cmluZztMAA9zb3VyY2VEaXJlY3RvcnlxAH4AGnhwdABbL1VzZXJzL2hhc3Nhbi9Eb2N1bWVudHMvU3R1ZGllcy9UaGVzaXMvV29yayBTcGFjZXMvU2NhbGEvU0JUU2NhbGEvdGFyZ2V0L3NjYWxhLTIuMTAvY2xhc3Nlc3QAAS91cgACW0Ks8xf4BghU4AIAAHhwAAAAFDvMcyC0y4xlSB/x8HRbx/m+lrPc
 external apis:
@@ -349,7 +308,7 @@ AAAAAAAAAAA=
 /Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/src/main/scala/TestMain.scala -> 
 AAAAAAAAAAA=
 compilations:
-12 items
+13 items
 00 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmANhCt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAWy9Vc2Vycy9oYXNzYW4vRG9jdW1lbnRzL1N0dWRpZXMvVGhlc2lzL1dvcmsgU3BhY2VzL1NjYWxhL1NCVFNjYWxhL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
 01 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmAStFZ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAWy9Vc2Vycy9oYXNzYW4vRG9jdW1lbnRzL1N0dWRpZXMvVGhlc2lzL1dvcmsgU3BhY2VzL1NjYWxhL1NCVFNjYWxhL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
 02 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmATgyN1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAWy9Vc2Vycy9oYXNzYW4vRG9jdW1lbnRzL1N0dWRpZXMvVGhlc2lzL1dvcmsgU3BhY2VzL1NjYWxhL1NCVFNjYWxhL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
@@ -362,3 +321,4 @@ compilations:
 09 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmFHmsR1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAWy9Vc2Vycy9oYXNzYW4vRG9jdW1lbnRzL1N0dWRpZXMvVGhlc2lzL1dvcmsgU3BhY2VzL1NjYWxhL1NCVFNjYWxhL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
 10 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmFIIWd1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAWy9Vc2Vycy9oYXNzYW4vRG9jdW1lbnRzL1N0dWRpZXMvVGhlc2lzL1dvcmsgU3BhY2VzL1NjYWxhL1NCVFNjYWxhL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
 11 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmFI27R1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAWy9Vc2Vycy9oYXNzYW4vRG9jdW1lbnRzL1N0dWRpZXMvVGhlc2lzL1dvcmsgU3BhY2VzL1NjYWxhL1NCVFNjYWxhL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
+12 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABWmFvY+x1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAWy9Vc2Vycy9oYXNzYW4vRG9jdW1lbnRzL1N0dWRpZXMvVGhlc2lzL1dvcmsgU3BhY2VzL1NjYWxhL1NCVFNjYWxhL3RhcmdldC9zY2FsYS0yLjEwL2NsYXNzZXN0AAEv
