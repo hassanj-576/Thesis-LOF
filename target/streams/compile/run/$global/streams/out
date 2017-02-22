@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mRunning main.scala.Test2 [0m
+[0m[[0minfo[0m] [0mRunning main.scala.LOF [0m
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/Users/hassan/Documents/Studies/Thesis/Work Spaces/Scala/SBTScala/target/scala-2.10/classes[0m
@@ -178,57 +178,57 @@
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #5[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #5[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #1[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #1[0m
-[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.remote.default-remote-dispatcher-7[0m
-[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.remote.default-remote-dispatcher-7[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #4[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #4[0m
+[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.actor.default-dispatcher-3[0m
+[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.actor.default-dispatcher-3[0m
 [0m[[0mdebug[0m] [0mInterrupting thread shuffle-client-1[0m
 [0m[[0mdebug[0m] [0m	Interrupted shuffle-client-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.actor.default-dispatcher-4[0m
+[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.actor.default-dispatcher-4[0m
+[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.actor.default-dispatcher-14[0m
+[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.actor.default-dispatcher-14[0m
 [0m[[0mdebug[0m] [0mInterrupting thread New I/O boss #3[0m
 [0m[[0mdebug[0m] [0m	Interrupted New I/O boss #3[0m
-[0m[[0mdebug[0m] [0mInterrupting thread shuffle-server-3[0m
-[0m[[0mdebug[0m] [0m	Interrupted shuffle-server-3[0m
-[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.remote.default-remote-dispatcher-6[0m
-[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.remote.default-remote-dispatcher-6[0m
 [0m[[0mdebug[0m] [0mInterrupting thread ShutdownMonitor[0m
 [0m[[0mdebug[0m] [0m	Interrupted ShutdownMonitor[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O server boss #6[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O server boss #6[0m
-[0m[[0mdebug[0m] [0mInterrupting thread shuffle-server-1[0m
-[0m[[0mdebug[0m] [0m	Interrupted shuffle-server-1[0m
-[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.actor.default-dispatcher-2[0m
-[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.actor.default-dispatcher-2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #4[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #4[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #2[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #5[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #5[0m
+[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.remote.default-remote-dispatcher-13[0m
+[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.remote.default-remote-dispatcher-13[0m
 [0m[[0mdebug[0m] [0mInterrupting thread shuffle-client-2[0m
 [0m[[0mdebug[0m] [0m	Interrupted shuffle-client-2[0m
 [0m[[0mdebug[0m] [0mInterrupting thread shuffle-client-0[0m
 [0m[[0mdebug[0m] [0m	Interrupted shuffle-client-0[0m
-[0m[[0mdebug[0m] [0mInterrupting thread Thread-1[0m
-[0m[[0mdebug[0m] [0m	Interrupted Thread-1[0m
-[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #2[0m
-[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread shuffle-server-1[0m
+[0m[[0mdebug[0m] [0m	Interrupted shuffle-server-1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O server boss #6[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O server boss #6[0m
 [0m[[0mdebug[0m] [0mInterrupting thread shuffle-server-0[0m
 [0m[[0mdebug[0m] [0m	Interrupted shuffle-server-0[0m
 [0m[[0mdebug[0m] [0mInterrupting thread Thread-3[0m
 [0m[[0mdebug[0m] [0m	Interrupted Thread-3[0m
-[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.actor.default-dispatcher-3[0m
-[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.actor.default-dispatcher-3[0m
-[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-10[0m
-[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-10[0m
+[0m[[0mdebug[0m] [0mInterrupting thread New I/O worker #1[0m
+[0m[[0mdebug[0m] [0m	Interrupted New I/O worker #1[0m
+[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-8[0m
+[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-8[0m
 [0m[[0mdebug[0m] [0mInterrupting thread shuffle-client-3[0m
 [0m[[0mdebug[0m] [0m	Interrupted shuffle-client-3[0m
 [0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-scheduler-1[0m
 [0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-scheduler-1[0m
-[0m[[0mdebug[0m] [0mInterrupting thread shuffle-server-2[0m
-[0m[[0mdebug[0m] [0m	Interrupted shuffle-server-2[0m
+[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.remote.default-remote-dispatcher-5[0m
+[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.remote.default-remote-dispatcher-5[0m
 [0m[[0mdebug[0m] [0mInterrupting thread shuffle-client-0[0m
 [0m[[0mdebug[0m] [0m	Interrupted shuffle-client-0[0m
+[0m[[0mdebug[0m] [0mInterrupting thread shuffle-server-3[0m
+[0m[[0mdebug[0m] [0m	Interrupted shuffle-server-3[0m
 [0m[[0mdebug[0m] [0mInterrupting thread shuffle-server-0[0m
 [0m[[0mdebug[0m] [0m	Interrupted shuffle-server-0[0m
-[0m[[0mdebug[0m] [0mInterrupting thread sparkDriverActorSystem-akka.actor.default-dispatcher-5[0m
-[0m[[0mdebug[0m] [0m	Interrupted sparkDriverActorSystem-akka.actor.default-dispatcher-5[0m
+[0m[[0mdebug[0m] [0mInterrupting thread shuffle-server-2[0m
+[0m[[0mdebug[0m] [0m	Interrupted shuffle-server-2[0m
 [0m[[0mdebug[0m] [0mSandboxed run complete..[0m
 [0m[[0mdebug[0m] [0mExited with code 0[0m

@@ -11,7 +11,7 @@ import com.github.karlhigley.spark.neighbors.ANN
 import org.apache.spark.rdd.RDD
 
 
-object Test2 {
+object LOF {
 	def main(args: Array[String]) {
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
@@ -37,7 +37,7 @@ object Test2 {
 	}
 	def getReachDistance(neighbors:RDD[(Long, Array[(Long, Double)])],k:Integer):RDD[(Long, Array[ Double])]= {
 		// have to calculate this dynamically for each Value based on k
-		val kDistance =0.02
+		val kDistance =0.04
 		val reachDist=neighbors.map(values=> (values._1,values._2.map(x=>(kDistance.max(x._2)))))
 		reachDist 
 	} 
