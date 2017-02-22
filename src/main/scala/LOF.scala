@@ -16,7 +16,8 @@ object LOF {
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
 		val neighbors = getNNeighbors("data2.arff",10,sc)
-		val reachDist= getReachDistance(neighbors,5)
+		val kDistance=getKDistance(neighbors,4)
+		val reachDist= getReachDistance(kDistance)
 		val localReachDist=getLocalReachDistance(reachDist)
 		val LOF=getLOF(localReachDist,neighbors)
 		LOF.collect().foreach(println)
@@ -35,10 +36,19 @@ object LOF {
 		neighbors
 	
 	}
-	def getReachDistance(neighbors:RDD[(Long, Array[(Long, Double)])],k:Integer):RDD[(Long, Array[ Double])]= {
+	def getKDistance(neighbors:RDD[(Long, Array[(Long, Double)])],k:Integer):RDD[((Long,Double), Array[ Double])]={
+		val rejected = neighbors.filter(values=> values._2.size>k)
+		println(neighbors.count()-rejected.count())
+		println(rejected.count())
+		neighbors.first()._2.foreach(println)
+		val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
+		val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2),values._2.map(x=>x._2)))
+		kDistance.collect()
+		kDistance
+	}
+	def getReachDistance(kDistance:RDD[((Long,Double), Array[ Double])]):RDD[(Long, Array[ Double])]= {
 		// have to calculate this dynamically for each Value based on k
-		val kDistance =0.04
-		val reachDist=neighbors.map(values=> (values._1,values._2.map(x=>(kDistance.max(x._2)))))
+		val reachDist=kDistance.map(values=> (values._1._1,values._2.map(x=>(values._1._2.max(x)))))
 		reachDist 
 	} 
 	def getLocalReachDistance(reachDist:RDD[(Long, Array[ Double])]):RDD[(Long,Double)]={
