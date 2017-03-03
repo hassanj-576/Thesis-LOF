@@ -15,12 +15,27 @@ object LOF {
 	def main(args: Array[String]) {
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
-		val neighbors = getNNeighbors("data2.arff",10,sc)
-		val kDistance=getKDistance(neighbors,4)
-		val reachDist= getReachDistance(kDistance)
-		val localReachDist=getLocalReachDistance(reachDist)
-		val LOF=getLOF(localReachDist,neighbors)
-		LOF.collect().foreach(println)
+		val neighbors = getNNeighbors("dataSmall.arff",9,sc)
+		neighbors.filter(values=>values._1==0).first()._2.foreach(println)
+		//println(neighbors.count())
+		//neighbors.first()._2.foreach(println
+	
+		// neighbors.collect().foreach(println)
+		val kDistance=getKDistance(neighbors,7)
+		//kDistance.collect().foreach(println)
+		print(kDistance.lookup(0)(0))
+		// val firstRdd= kDistance.filter(values=>values._1._1==0)
+		// print(firstRdd.first())
+		getReachDistance(neighbors,kDistance)
+		// reachDist.filter(values=>values._1==0).first()._2.foreach(println)
+		// val localReachDist=getLocalReachDistance(reachDist)
+		// print (localReachDist.filter(values=>values._1==0).first())
+
+		// val LOF=getLOF(localReachDist,neighbors)
+		// val newLOF=LOF.sortBy(_._2)
+		// newLOF.foreach(println)
+		
+		//Thread.sleep(500000)
 		sc.stop()
 		
 	}
@@ -30,26 +45,29 @@ object LOF {
 		val denseVector = df.map(row => {Vectors.dense(row.toSeq.toArray.map({case s: String => s.toDouble case  l: Long => l.toDouble case  _ => 0.0}))})
 		val dimension= denseVector.first().size
 		val denseRDDZipped = denseVector.map(values=>(values.toSparse)).zipWithIndex()
-		val FinalVector =denseRDDZipped.map(values=>(values._2,values._1)) 
-		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(4).setSignatureLength(64).setBucketWidth(5).train(FinalVector)
+		val finalVector =denseRDDZipped.map(values=>(values._2,values._1)) 
+		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(10).setSignatureLength(64).setBucketWidth(2000).train(finalVector)
 		val neighbors = annModel.neighbors(minPoints)
 		neighbors
 	
 	}
-	def getKDistance(neighbors:RDD[(Long, Array[(Long, Double)])],k:Integer):RDD[((Long,Double), Array[ Double])]={
+	def getKDistance(neighbors:RDD[(Long, Array[(Long, Double)])],k:Integer):RDD[((Long,Double))]={
 		val rejected = neighbors.filter(values=> values._2.size>k)
-		println(neighbors.count()-rejected.count())
 		println(rejected.count())
-		neighbors.first()._2.foreach(println)
 		val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
-		val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2),values._2.map(x=>x._2)))
-		kDistance.collect()
+		println(newNeighbors.first())
+		val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2)))
+		//kDistance.collect()
 		kDistance
 	}
-	def getReachDistance(kDistance:RDD[((Long,Double), Array[ Double])]):RDD[(Long, Array[ Double])]= {
+	//def getReachDistance(neighbors:RDD[(Long, Array[(Long, Double)])],kDistance:RDD[((Long,Double))]):RDD[(Long, Array[ Double])]= {
+	def getReachDistance(neighbors:RDD[(Long, Array[(Long, Double)])],kDistance:RDD[((Long,Double))])= {
+		val flatNeighbors = neighbors.flatMap(x=>x)
+		flatNeighbors.collect().foreach(println)
 		// have to calculate this dynamically for each Value based on k
-		val reachDist=kDistance.map(values=> (values._1._1,values._2.map(x=>(values._1._2.max(x)))))
-		reachDist 
+		//val reachDist=neighbors.map(values=>(values._1,values._2.map(x=>(x._2.max(kDistance.filter(v=>v._1==x._1).first()._2 )))))
+		//val reachDist=neighbors.map(values=>(values._1._1,values._2.map(x=>(x._2.max(kDistance.lookup(x._1)(0))))))
+		//reachDist 
 	} 
 	def getLocalReachDistance(reachDist:RDD[(Long, Array[ Double])]):RDD[(Long,Double)]={
 		val localReachDist= reachDist.map(values=> (values._1,density(values._2)))

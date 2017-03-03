@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: spark-neighbors
+Implementation-Version: 0.2.2
+Spark-HasRPackage: false
+Specification-Vendor: com.github.karlhigley
+Specification-Title: spark-neighbors
+Implementation-Vendor-Id: com.github.karlhigley
+Specification-Version: 0.2.2
+Implementation-Vendor: com.github.karlhigley
+
