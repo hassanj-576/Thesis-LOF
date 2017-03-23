@@ -18,7 +18,7 @@ object LOF {
 		val fileName=args(0)
 		val k = args(1).toInt
 		val bucketWidth = args(2).toInt
-		val neighbors = getNNeighbors("dataSmall.csv",k,sc,bucketWidth)
+		val neighbors = getNNeighbors(fileName,k,sc,bucketWidth)
 		neighbors.filter(values=>values._1==0).first()._2.foreach(println)
 		//println(neighbors.count())
 		//neighbors.first()._2.foreach(println
@@ -36,8 +36,7 @@ object LOF {
 
 		val LOF=getLOF(localReachDist,neighbors)
 		val newLOF=LOF.sortBy(_._2)
-		newLOF.foreach(println)
-		
+		newLOF.foreach(println)	
 		//Thread.sleep(500000)
 		sc.stop()
 		
