@@ -15,13 +15,16 @@ object LOF {
 	def main(args: Array[String]) {
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
-		val neighbors = getNNeighbors("dataSmall.csv",10,sc)
+		val fileName=args(0)
+		val k = args(1).toInt
+		val bucketWidth = args(2).toInt
+		val neighbors = getNNeighbors("dataSmall.csv",k,sc,bucketWidth)
 		neighbors.filter(values=>values._1==0).first()._2.foreach(println)
 		//println(neighbors.count())
 		//neighbors.first()._2.foreach(println
 	
 		// neighbors.collect().foreach(println)
-		val kDistance=getKDistance(neighbors,9)
+		val kDistance=getKDistance(neighbors,(k-1)))
 		//kDistance.collect().foreach(println)
 		print(kDistance.lookup(0)(0))
 		// val firstRdd= kDistance.filter(values=>values._1._1==0)
@@ -39,14 +42,14 @@ object LOF {
 		sc.stop()
 		
 	}
-	def getNNeighbors(fileName:String,minPoints:Int,sc:SparkContext):RDD[(Long, Array[(Long, Double)])]={
+	def getNNeighbors(fileName:String,minPoints:Int,sc:SparkContext,bucketWidth:Int):RDD[(Long, Array[(Long, Double)])]={
 		val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 		val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
 		val denseVector = df.map(row => {Vectors.dense(row.toSeq.toArray.map({case s: String => s.toDouble case  l: Long => l.toDouble case  _ => 0.0}))})
 		val dimension= denseVector.first().size
 		val denseRDDZipped = denseVector.map(values=>(values.toSparse)).zipWithIndex()
 		val finalVector =denseRDDZipped.map(values=>(values._2,values._1)) 
-		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(10).setSignatureLength(64).setBucketWidth(20000).train(finalVector)
+		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(10).setSignatureLength(64).setBucketWidth(bucketWidth).train(finalVector)
 		val neighbors = annModel.neighbors(minPoints)
 		neighbors
 	
