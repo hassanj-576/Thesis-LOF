@@ -24,7 +24,7 @@ object LOF {
 		//neighbors.first()._2.foreach(println
 	
 		// neighbors.collect().foreach(println)
-		val kDistance=getKDistance(neighbors,(k-1)))
+		val kDistance=getKDistance(neighbors,(k-1))
 		//kDistance.collect().foreach(println)
 		print(kDistance.lookup(0)(0))
 		// val firstRdd= kDistance.filter(values=>values._1._1==0)
