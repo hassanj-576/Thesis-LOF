@@ -15,7 +15,7 @@ object mainClass {
 	def main(args: Array[String]) {
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
-		val lofWrapper = new LOFWrapper("dataSmall.csv",10,sc,550)
+		val lofWrapper = new LOFWrapper("dataSmall.csv",10,sc,500)
 		val lofVal = lofWrapper.getLOF()
 		lofVal.foreach(println)
 		// val fileName=args(0)
