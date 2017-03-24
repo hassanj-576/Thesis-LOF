@@ -11,12 +11,12 @@ import com.github.karlhigley.spark.neighbors.ANN
 import org.apache.spark.rdd.RDD
 
 
-class LOFWrapper(fileName:String,k:Int,sc:SparkContext,bucketWidth:Int) {
+class LOFWrapper(fName:String,kPoints:Int,sContext:SparkContext,bWidth:Int) {
 	
-	private var fileName = fileName
-	private var k =k
-	private var sc=sc
-	private var bucketWidth=bucketWidth
+	private var fileName = fName
+	private var k =kPoints
+	private var sc=sContext
+	private var bucketWidth=bWidth
 
 	def getLOF():RDD[(Long,Double)]={
 		val LOFvar = new LOFClass()
@@ -25,6 +25,6 @@ class LOFWrapper(fileName:String,k:Int,sc:SparkContext,bucketWidth:Int) {
 		val kDistance=LOFvar.getKDistance(neighbors,(k-1))
 		val localReachDist = LOFvar.getReachDistance(neighbors,kDistance)
 		val LOF=LOFvar.getLOF(localReachDist,neighbors)
-
+		LOF
 	}
 }
