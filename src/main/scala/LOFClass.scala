@@ -12,24 +12,6 @@ import org.apache.spark.rdd.RDD
 
 
 class LOFClass () {
-	// def main(args: Array[String]) {
-	// 	val conf = new SparkConf().setMaster("local").setAppName("My App")
-	// 	val sc = new SparkContext(conf)
-	// 	val fileName=args(0)
-	// 	val k = args(1).toInt
-	// 	val bucketWidth = args(2).toInt
-	// 	val neighbors = getNNeighbors(fileName,k,sc,bucketWidth)
-	// 	neighbors.filter(values=>values._1==0).first()._2.foreach(println)
-	// 	val kDistance=getKDistance(neighbors,(k-1))
-	// 	print(kDistance.lookup(0)(0))
-	// 	val localReachDist = getReachDistance(neighbors,kDistance)
-	// 	val LOF=getLOF(localReachDist,neighbors)
-	// 	val newLOF=LOF.sortBy(_._2)
-	// 	newLOF.foreach(println)	
-	// 	sc.stop()
-	println("LOF class Created")
-		
-	// }
 	def getNNeighbors(fileName:String,minPoints:Int,sc:SparkContext,bucketWidth:Int):RDD[(Long, Array[(Long, Double)])]={
 		val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 		val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
