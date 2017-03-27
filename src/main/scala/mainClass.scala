@@ -19,7 +19,7 @@ object mainClass {
 		val bucketWidth = args(1).toInt
 		val kList= ArrayBuffer[Int]()
 		val k=10;
-		for ( a <- 2 to args.length){
+		for ( a <- 2 to args.length-1){
 			kList+=args(a).toInt
 		}
 		println( kList)
