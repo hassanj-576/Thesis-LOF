@@ -28,7 +28,7 @@ class LOFWrapper(fName:String,kPoints:ArrayBuffer[Int],sContext:SparkContext,bWi
 		neighbors.first()._2.foreach(println)
 		val neighborWithzip= neighbors.map(values=>(values._1,values._2.zipWithIndex.map(y=>(y._2,y._1))))
 		//neighborWithzip.first()._2.foreach(println)
-		for (x <- kList) {
+		for (x <- sortedList) {
 			val filteredNeighbors = neighborWithzip.map(values=> (values._1,values._2.filter(z=>z._1<x).map(x=>x._2)))
 			filteredNeighbors.first()._2.foreach(println)
 			val kDistance=LOFvar.getKDistance(neighbors,(x-1))
