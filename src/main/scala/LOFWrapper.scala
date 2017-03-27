@@ -25,10 +25,9 @@ class LOFWrapper(fName:String,kPoints:ArrayBuffer[Int],sContext:SparkContext,bWi
 		val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
 		val LOFvar = new LOFClass()
 		val neighbors = LOFvar.getNNeighbors(fileName,kList(0),sc,bucketWidth)
-		println(neighbors.first())
+		neighbors.first()._2.foreach(println)
 		for (x <- kList) {
 			
-			println(neighbors.first())
 			val kDistance=LOFvar.getKDistance(neighbors,(x-1))
 			val localReachDist = LOFvar.getReachDistance(neighbors,kDistance)
 			val LOF=LOFvar.getLOF(localReachDist,neighbors)
