@@ -20,8 +20,8 @@ class LOFWrapper(fName:String,kPoints:ArrayBuffer[Int],sContext:SparkContext,bWi
 	private var bucketWidth=bWidth
 
 	def getLOF():ArrayBuffer[RDD[(Long,Double)]]={
-		scala.util.Sorting.stableSort(kList)
-		kList.foreach(println)
+		val sortedList=scala.util.Sorting.stableSort(kList)
+		sortedList.foreach(println)
 		val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
 		
 			val LOFvar = new LOFClass()
