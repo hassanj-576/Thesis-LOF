@@ -20,9 +20,13 @@ class LOFWrapper(fName:String,kPoints:ArrayBuffer[Int],sContext:SparkContext,bWi
 	private var bucketWidth=bWidth
 
 	def getLOF():ArrayBuffer[RDD[(Long,Double)]]={
+		scala.util.Sorting.stableSort(kList)
+		kList.foreach(println)
 		val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
-		for (x <- kList) {
+		
 			val LOFvar = new LOFClass()
+			
+		for (x <- kList) {
 			val neighbors = LOFvar.getNNeighbors(fileName,x,sc,bucketWidth)
 			println(neighbors.first())
 			val kDistance=LOFvar.getKDistance(neighbors,(x-1))
