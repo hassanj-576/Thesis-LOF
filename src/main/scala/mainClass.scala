@@ -27,8 +27,9 @@ object mainClass {
 		val sc = new SparkContext(conf)
 		val lofWrapper = new LOFWrapper(fileName,kList,sc,bucketWidth)
 		val lofVal = lofWrapper.getLOF()
-		lofVal.sortBy(_._2).foreach(println)
-		
+		for (x <- lofVal) {
+			x.sortBy(_._2).foreach(println)
+		}
 
 		//Comment from stones		
 		sc.stop()
