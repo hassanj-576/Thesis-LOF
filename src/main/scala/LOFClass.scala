@@ -26,18 +26,14 @@ class LOFClass () {
 	}
 	def getKDistance(neighbors:RDD[(Long, Array[(Long, Double)])],k:Integer):RDD[((Long,Double))]={
 		val rejected = neighbors.filter(values=> values._2.size>=k)
-		println(rejected.count())
 		val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
-		println(newNeighbors.first())
 		val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2)))
 		kDistance
 	}
 
 	def getReachDistance(neighbors:RDD[(Long, Array[(Long, Double)])],kDistance:RDD[((Long,Double))]):RDD[(Long,Double)]= {
 		val flatNeighbors = neighbors.flatMapValues(x=>x).map(values=>(values._2._1,(values._1,values._2._2))).join(kDistance).map(y=>(y._2._1._1,y._2._2.max(y._2._1._2)))
-		flatNeighbors.filter(values=>values._1==0).foreach(println)
 		val localReachDistance = flatNeighbors.combineByKey((values)=> (values.toDouble, 1),(x:(Double,Int), values)=> (x._1 + values, x._2 + 1), (x:(Double,Int), y:(Double,Int))=>(x._1 + y._1, x._2+ y._2)).map(values=>(values._1,(values._2._2/values._2._1)))
-		localReachDistance.filter(values=>values._1==0).foreach(println)
 		localReachDistance
 		
 	} 
@@ -49,9 +45,7 @@ class LOFClass () {
 		val neighborWithReach=neighbors.join(reachDist).map(values=>((values._1,values._2._2),values._2._1))
 		val flat = neighborWithReach.flatMapValues(x=>x).map(values=>(values._2._1,values._1))
 		val result=flat.join(reachDist).map(values=>(values._2._1._1,(values._2._1._2,values._2._2)))
-		result.filter(values=>values._1==0).foreach(println)
 		val LOF = result.combineByKey((v) => (v._2.toDouble / v._1, 1),(acc: (Double, Int), q:((Double,Double))) => ((q._2/q._1)+acc._1,acc._2+1),(acc1: (Double, Int), acc2: (Double, Int)) => (acc1._1 + acc2._1, acc1._2 + acc2._2))
-		LOF.filter(values=>values._1==0).foreach(println)
 		LOF.map(values=>(values._1,(values._2._1/values._2._2)))
 	}
 	

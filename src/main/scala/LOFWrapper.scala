@@ -23,11 +23,11 @@ class LOFWrapper(fName:String,kPoints:ArrayBuffer[Int],sContext:SparkContext,bWi
 		val sortedList=kList.sortWith(_ > _)
 		sortedList.foreach(println)
 		val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
-		
-			val LOFvar = new LOFClass()
-			
+		val LOFvar = new LOFClass()
+		val neighbors = LOFvar.getNNeighbors(fileName,0,sc,bucketWidth)
+		neighbors.first(println)
 		for (x <- kList) {
-			val neighbors = LOFvar.getNNeighbors(fileName,x,sc,bucketWidth)
+			
 			println(neighbors.first())
 			val kDistance=LOFvar.getKDistance(neighbors,(x-1))
 			val localReachDist = LOFvar.getReachDistance(neighbors,kDistance)
