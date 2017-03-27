@@ -23,15 +23,15 @@ object mainClass {
 			kList+=args(a).toInt
 		}
 		println( kList)
-		// val conf = new SparkConf().setMaster("local").setAppName("My App")
-		// val sc = new SparkContext(conf)
-		// val lofWrapper = new LOFWrapper(fileName,k,sc,bucketWidth)
-		// val lofVal = lofWrapper.getLOF()
-		// lofVal.sortBy(_._2).foreach(println)
+		val conf = new SparkConf().setMaster("local").setAppName("My App")
+		val sc = new SparkContext(conf)
+		val lofWrapper = new LOFWrapper(fileName,kList,sc,bucketWidth)
+		val lofVal = lofWrapper.getLOF()
+		lofVal.sortBy(_._2).foreach(println)
 		
 
 		//Comment from stones		
-		//sc.stop()
+		sc.stop()
 		
 	}
 	
