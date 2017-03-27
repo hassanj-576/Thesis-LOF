@@ -20,7 +20,8 @@ object mainClass {
 		val sc = new SparkContext(conf)
 		val lofWrapper = new LOFWrapper(fileName,k,sc,bucketWidth)
 		val lofVal = lofWrapper.getLOF()
-		lofVal.foreach(println)
+		lofVal.sortBy(_._2).foreach(println)
+		
 
 		//Comment from stones		
 		sc.stop()
