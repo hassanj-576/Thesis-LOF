@@ -9,6 +9,11 @@ import java.io.StringReader
 import com.opencsv.CSVReader;
 import com.github.karlhigley.spark.neighbors.ANN
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql._
+import org.apache.spark.sql.types._
+import org.apache.spark.ml.feature.VectorAssembler
+import org.apache.spark.mllib.linalg.DenseVector
 
 
 object LOF {
@@ -18,6 +23,7 @@ object LOF {
 		val fileName=args(0)
 		val k = args(1).toInt
 		val bucketWidth = args(2).toInt
+		println(fileName)
 		val neighbors = getNNeighbors(fileName,k,sc,bucketWidth)
 		neighbors.filter(values=>values._1==0).first()._2.foreach(println)
 		//println(neighbors.count())
@@ -43,8 +49,11 @@ object LOF {
 	}
 	def getNNeighbors(fileName:String,minPoints:Int,sc:SparkContext,bucketWidth:Int):RDD[(Long, Array[(Long, Double)])]={
 		val sqlContext = new org.apache.spark.sql.SQLContext(sc)
-		val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
-		val denseVector = df.map(row => {Vectors.dense(row.toSeq.toArray.map({case s: String => s.toDouble case  l: Long => l.toDouble case  _ => 0.0}))})
+		import sqlContext.implicits._
+        val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
+		val doubleDf=df.select((df.columns).map(c => col(c).cast("double")): _*)
+		val denseDataFrame = new VectorAssembler().setInputCols(df.columns).setOutputCol("features").transform(doubleDf)
+		val denseVector=denseDataFrame.select("features").rdd.map(row=> DenseVector.fromML(row.getAs[org.apache.spark.ml.linalg.DenseVector]("features")))
 		val dimension= denseVector.first().size
 		val denseRDDZipped = denseVector.map(values=>(values.toSparse)).zipWithIndex()
 		val finalVector =denseRDDZipped.map(values=>(values._2,values._1)) 
