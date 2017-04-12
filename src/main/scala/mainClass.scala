@@ -11,7 +11,7 @@ import com.github.karlhigley.spark.neighbors.ANN
 import org.apache.spark.rdd.RDD
 import scala.collection.mutable.ArrayBuffer
 
-
+//SparkSQL branch
 object mainClass {
 	def main(args: Array[String]) {
 		val faster=args(0).toInt
