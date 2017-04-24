@@ -13,6 +13,7 @@ import org.apache.spark.rdd.RDD
 
 class LOFClass () {
 	def getNNeighbors(fileName:String,minPoints:Int,sc:SparkContext,bucketWidth:Int):RDD[(Long, Array[(Long, Double)])]={
+		//Change
 		val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 		import sqlContext.implicits._
         val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
