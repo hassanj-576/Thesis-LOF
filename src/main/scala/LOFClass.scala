@@ -17,11 +17,11 @@ import org.apache.spark.mllib.linalg.DenseVector
 
 
 class LOFClass () {
-	def getNNeighbors(fileName:String,minPoints:Int,sc:SparkContext,bucketWidth:Int):RDD[(Long, Array[(Long, Double)])]={
+	def getNNeighbors(fileName:String,minPoints:Int,sc:SparkContext,bucketWidth:Int):DataFrame={
 		//Change
 		val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 		import sqlContext.implicits._
-       		 val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
+       	val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
 		val doubleDf=df.select((df.columns).map(c => col(c).cast("double")): _*)
 		val denseDataFrame = new VectorAssembler().setInputCols(df.columns).setOutputCol("features").transform(doubleDf)
 		val denseVector=denseDataFrame.select("features").rdd.map(row=> DenseVector.fromML(row.getAs[org.apache.spark.ml.linalg.DenseVector]("features")))
