@@ -21,7 +21,8 @@ class LOFClass () {
 		val finalVector =denseRDDZipped.map(values=>(values._2,values._1)) 
 		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(10).setSignatureLength(64).setBucketWidth(bucketWidth).train(finalVector)
 		val neighbors = annModel.neighbors(minPoints)
-		neighbors
+		val neighborsDF = neighbors.toDF()
+		neighborsDF
 	
 	}
 	def getKDistance(neighbors:RDD[(Long, Array[(Long, Double)])],k:Integer):RDD[((Long,Double))]={
