@@ -9,6 +9,11 @@ import java.io.StringReader
 import com.opencsv.CSVReader;
 import com.github.karlhigley.spark.neighbors.ANN
 import org.apache.spark.rdd.RDD
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql._
+import org.apache.spark.sql.types._
+import org.apache.spark.ml.feature.VectorAssembler
+import org.apache.spark.mllib.linalg.DenseVector
 
 
 class LOFClass () {
