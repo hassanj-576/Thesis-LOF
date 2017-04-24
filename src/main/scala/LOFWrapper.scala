@@ -29,8 +29,8 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 			// val localReachDist = LOFvar.getReachDistance(filteredNeighbors,kDistance)
 			// val LOF=LOFvar.getLOF(localReachDist,filteredNeighbors)
 			// LOFList+=LOF
-		}
 		
+		val LOFList=NULL
 		LOFList
 	}
 }
