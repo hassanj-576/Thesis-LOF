@@ -72,7 +72,7 @@ class LOFClass () {
 		neighborVal.foreach{
 			(id: Long, distance:Double) => 
 			println(distance)
-			neighborVal[0]=(99,99.99)
+			neighborVal(0)=(99,99.99)
 		}
 		neighborVal
   		
