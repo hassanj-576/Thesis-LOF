@@ -57,6 +57,7 @@ class LOFClass () {
 					returnArray:+Math.max(10.0,neighborVal(a).getDouble(1))
 				}
 				val tempReturn =10
+				println(returnArray)
 				returnArray
 			 }
 
