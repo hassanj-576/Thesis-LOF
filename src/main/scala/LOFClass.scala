@@ -38,12 +38,8 @@ class LOFClass () {
 	def getKDistance(neighborsDF:DataFrame,k:Integer,sqlContext:SQLContext):DataFrame={
 		import sqlContext.implicits._
 		val rejected=neighborsDF.where("size(_2)=="+k)
-		rejected.select("_2").show()
-		rejected.printSchema()
 		rejected.registerTempTable("df")
 		val kDistance= sqlContext.sql("SELECT _1,_2["+(k-1)+"]['_2'] FROM df")
-		kDistance.show()
-		kDistance
 		// val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
 		// val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2)))
 		// kDistance
