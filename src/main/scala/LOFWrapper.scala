@@ -21,11 +21,12 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 	private var fasterCheck=faster
 
 	def getLOF():ArrayBuffer[RDD[(Long,Double)]]={
+			val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 			val sortedList=kList.sortWith(_ > _)
 			val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
 			val LOFvar = new LOFClass()
-			val neighbors = LOFvar.getNNeighbors(fileName,sortedList(0),sc,bucketWidth)
-			val kDistance=LOFvar.getKDistance(neighbors,sortedList(0))
+			val neighbors = LOFvar.getNNeighbors(fileName,sortedList(0),sqlContext,bucketWidth)
+			val kDistance=LOFvar.getKDistance(neighbors,sortedList(0),sqlContext)
 			// val localReachDist = LOFvar.getReachDistance(filteredNeighbors,kDistance)
 			// val LOF=LOFvar.getLOF(localReachDist,filteredNeighbors)
 			// LOFList+=LOF

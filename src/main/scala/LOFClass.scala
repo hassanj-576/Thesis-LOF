@@ -17,9 +17,8 @@ import org.apache.spark.mllib.linalg.DenseVector
 
 
 class LOFClass () {
-	def getNNeighbors(fileName:String,minPoints:Int,sc:SparkContext,bucketWidth:Int):DataFrame={
+	def getNNeighbors(fileName:String,minPoints:Int,sqlContext:SQLContext,bucketWidth:Int):DataFrame={
 		//Change
-		val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 		import sqlContext.implicits._
         val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
 		val doubleDf=df.select((df.columns).map(c => col(c).cast("double")): _*)
@@ -36,10 +35,12 @@ class LOFClass () {
 		neighborsDF
 	
 	}
-	def getKDistance(neighborsDF:DataFrame,k:Integer):DataFrame={
+	def getKDistance(neighborsDF:DataFrame,k:Integer,sqlContext:SQLContext):DataFrame={
+		import sqlContext.implicits._
 		val rejected=neighborsDF.where("size(_2)=="+k)
 		rejected.select("_2").show()
-		val kDistance=
+		rejected.registerTempTable("df")
+		val kDistance= sqlContext.sql("SELECT _2[10][2] FROM df").show()
 		
 		rejected.show()
 		rejected
