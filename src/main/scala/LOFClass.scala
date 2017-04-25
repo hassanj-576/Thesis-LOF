@@ -53,6 +53,7 @@ class LOFClass () {
 			{
 				neighborVal.foreach(x=> 10)
 			 }
+			 neighborVal
 
 		 )
 		neighbors.withColumn("upper", maxUDF(neighbors("_2"))).show
