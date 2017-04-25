@@ -54,10 +54,10 @@ class LOFClass () {
 				//neighborVal.map(x=>x(1).toDouble)
 				val returnArray = Array[Double]()
 				for( a <- 0 to neighborVal.size-1){
-					println(Math.max(10.0,neighborVal(a).getDouble(1)))
+					returnArray+=Math.max(10.0,neighborVal(a).getDouble(1))
 				}
 				val tempReturn =10
-				tempReturn
+				returnArray
 			 }
 
 
