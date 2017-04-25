@@ -52,8 +52,9 @@ class LOFClass () {
 		def maxUDF=udf((neighborVal:Seq[Row]) => 
 			{
 				neighborVal.foreach(x=> 10)
+				neighborVal
 			 }
-			 neighborVal
+
 
 		 )
 		neighbors.withColumn("upper", maxUDF(neighbors("_2"))).show
