@@ -55,6 +55,7 @@ class LOFClass () {
 				val returnArray = Array[Double]()
 				for( a <- 0 to neighborVal.size-1){
 					returnArray:+Math.max(10.0,neighborVal(a).getDouble(1))
+					returnArray:+10
 				}
 				val tempReturn =10
 				returnArray.foreach(println)
