@@ -72,7 +72,6 @@ class LOFClass () {
 		neighborVal.foreach{
 			x=> 
 			println(x._2)
-			neighborVal(0)=(99,99.99)
 		}
 		neighborVal
   		
