@@ -31,12 +31,14 @@ class LOFClass () {
 		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(10).setSignatureLength(64).setBucketWidth(bucketWidth).train(finalVector)
 		val neighbors = annModel.neighbors(minPoints)
 		val neighborsDF = neighbors.toDF()
+		neighborsDF.registerTempTable("tab1")
+        sqlContext.sql("select size(_2) from tab1").show()
 		neighborsDF
 	
 	}
 	def getKDistance(neighborsDF:DataFrame,k:Integer):DataFrame={
 		val rejected=neighborsDF.where("size(_2)=="+k)
-        neighborsDF.select("size(_2)").show()
+		
 		rejected.show()
 		rejected
 		// val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
