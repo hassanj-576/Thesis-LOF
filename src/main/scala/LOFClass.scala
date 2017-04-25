@@ -52,7 +52,7 @@ class LOFClass () {
 		def maxUDF=udf((neighborVal:Seq[Row]) => 
 			{
 				//neighborVal.map(x=>x(1).toDouble)
-				val returnArray = Array[Double]()
+				var returnArray = Array[Double]()
 				for( a <- 0 to neighborVal.size-1){
 					returnArray:+Math.max(10.0,neighborVal(a).getDouble(1))
 					returnArray:+10
