@@ -15,6 +15,7 @@ import org.apache.spark.sql.types._
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.mllib.linalg.DenseVector
 import org.apache.spark.sql.functions.udf
+import scala.collection.mutable.ListBuffer
 
 
 class LOFClass () {
