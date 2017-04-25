@@ -49,7 +49,7 @@ class LOFClass () {
 		// sqlContext.sql("SELECT _1, maxUDF(_2) FROM nTemp").show()
 		// neighbors
 		neighbors.printSchema()
-		def maxUDF=udf((neighborVal:Seq[Row]) => 
+		def maxUDF=udf((neighborVal:Seq[Row(Long,Double)]) => 
 			{
 				//neighborVal.map(x=>x(1).toDouble)
 				val returnArray = Array[Double]()
