@@ -47,11 +47,12 @@ class LOFClass () {
 		neighbors.registerTempTable("nTemp")
 		sqlContext.udf.register("maxUDF", (givenVal: Array[Long,Double]) => (
 			givenVal.foreach(
-			(id: Long, distance:Double) => 
-			max = (distance,10).max
-			println(max)
-			givenVal(id,max)
+				(id: Long, distance:Double) => 
+				max = (distance,10).max
+				println(max)
+				givenVal(id,max)
 			)
+		)
 		)
 		sqlContext.sql("SELECT _1, maxUDF(_2) FROM nTemp").show()
 		neighbors
