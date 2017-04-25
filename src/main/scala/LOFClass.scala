@@ -45,11 +45,13 @@ class LOFClass () {
 	def getReachDistance(neighbors:DataFrame,kDistance:DataFrame,sqlContext:SQLContext):DataFrame= {
 		import sqlContext.implicits._
 		neighbors.registerTempTable("nTemp")
-		sqlContext.udf.register("maxUDF", (givenVal: Array[(Long,Double)]) => (
-			givenVal.foreach(
-				(id: Long, distance:Double) => 
-					println(distance)
-				)
+		sqlContext.udf.register("maxUDF", (givenVal: Array[(Long,Double)]) => 
+			(
+				givenVal.foreach{
+					v=>
+					println(v._2)
+
+				}
 			)
 		)
 		sqlContext.sql("SELECT _1, maxUDF(_2) FROM nTemp").show()
