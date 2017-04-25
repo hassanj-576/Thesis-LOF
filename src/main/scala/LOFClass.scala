@@ -48,9 +48,9 @@ class LOFClass () {
 		sqlContext.udf.register("maxUDF", (givenVal: Array[(Long,Double)]) => (
 			givenVal.foreach(
 				(id: Long, distance:Double) => 
-				max = (distance,10).max
-				println(max)
-				givenVal(id,max)
+				maxVal = (distance,10).max
+				println(maxVal)
+				givenVal(id,maxVal)
 			)
 		)
 		)
