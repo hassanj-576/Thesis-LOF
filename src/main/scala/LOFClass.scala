@@ -41,7 +41,7 @@ class LOFClass () {
 		rejected.select("_2").show()
 		rejected.printSchema()
 		rejected.registerTempTable("df")
-		val kDistance= sqlContext.sql("SELECT _2[9]['_2'] FROM df").show()
+		val kDistance= sqlContext.sql("SELECT _1,_2["+k+"]['_2'] FROM df").show()
 		
 		rejected.show()
 		rejected
