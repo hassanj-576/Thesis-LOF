@@ -56,7 +56,7 @@ class LOFClass () {
 				val buf = new ListBuffer[Double]             
 				for( a <- 0 to neighborVal.size-1){
 					buf+=Math.max(10.0,neighborVal(a).getDouble(1))
-					returnArray:+10
+					//returnArray:+10
 				}
 				val tempReturn =10
 				buf.foreach(println)
