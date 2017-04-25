@@ -53,7 +53,7 @@ class LOFClass () {
 			{
 				val returnArray = Array[Double]()
 				for( a <- 0 to neighborVal.size-1){
-					returnArray:+ Math.max(10,neighborVal(a)(1))
+					returnArray:+ Math.max(10,neighborVal(a)(1).toDouble)
 				}
 				val tempReturn =10
 				returnArray
