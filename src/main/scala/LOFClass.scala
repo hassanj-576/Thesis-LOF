@@ -38,6 +38,8 @@ class LOFClass () {
 	}
 	def getKDistance(neighborsDF:DataFrame,k:Integer):DataFrame={
 		val rejected=neighborsDF.where("size(_2)=="+k)
+		rejected.select("_2").show()
+		val kDistance=
 		
 		rejected.show()
 		rejected
