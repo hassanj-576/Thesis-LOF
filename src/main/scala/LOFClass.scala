@@ -14,13 +14,14 @@ import org.apache.spark.sql._
 import org.apache.spark.sql.types._
 import org.apache.spark.ml.feature.VectorAssembler
 import org.apache.spark.mllib.linalg.DenseVector
+import org.apache.spark.sql.functions.udf
 
 
 class LOFClass () {
 	def getNNeighbors(fileName:String,minPoints:Int,sqlContext:SQLContext,bucketWidth:Int):DataFrame={
 		//Change
 		import sqlContext.implicits._
-        val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
+		val df = sqlContext.read.format("com.databricks.spark.csv").load(fileName)
 		val doubleDf=df.select((df.columns).map(c => col(c).cast("double")): _*)
 		val denseDataFrame = new VectorAssembler().setInputCols(df.columns).setOutputCol("features").transform(doubleDf)
 		val denseVector=denseDataFrame.select("features").rdd.map(row=> DenseVector.fromML(row.getAs[org.apache.spark.ml.linalg.DenseVector]("features")))
@@ -39,15 +40,16 @@ class LOFClass () {
 		rejected.registerTempTable("df")
 		val kDistance= sqlContext.sql("SELECT _1,_2["+(k-1)+"]['_2'] FROM df")
 		kDistance
-		// val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
-		// val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2)))
-		// kDistance
 	}
 
-	def getReachDistance(neighbors:RDD[(Long, Array[(Long, Double)])],kDistance:RDD[((Long,Double))]):RDD[(Long,Double)]= {
-		val flatNeighbors = neighbors.flatMapValues(x=>x).map(values=>(values._2._1,(values._1,values._2._2))).join(kDistance).map(y=>(y._2._1._1,y._2._2.max(y._2._1._2)))
-		val localReachDistance = flatNeighbors.combineByKey((values)=> (values.toDouble, 1),(x:(Double,Int), values)=> (x._1 + values, x._2 + 1), (x:(Double,Int), y:(Double,Int))=>(x._1 + y._1, x._2+ y._2)).map(values=>(values._1,(values._2._2/values._2._1)))
-		localReachDistance
+	def getReachDistance(neighbors:DataFrame,kDistance:DataFrame,sqlContext:SQLContext):DataFrame= {
+		import sqlContext.implicits._
+		val maxUDF = udf(maxFunction)
+		neighbors.withColumn("upper", maxUDF('_2')).show
+		neighbors
+		// val flatNeighbors = neighbors.flatMapValues(x=>x).map(values=>(values._2._1,(values._1,values._2._2))).join(kDistance).map(y=>(y._2._1._1,y._2._2.max(y._2._1._2)))
+		// val localReachDistance = flatNeighbors.combineByKey((values)=> (values.toDouble, 1),(x:(Double,Int), values)=> (x._1 + values, x._2 + 1), (x:(Double,Int), y:(Double,Int))=>(x._1 + y._1, x._2+ y._2)).map(values=>(values._1,(values._2._2/values._2._1)))
+		// localReachDistance
 		
 	} 
 	def getLocalReachDistance(reachDist:RDD[(Long, Array[ Double])]):RDD[(Long,Double)]={
@@ -62,7 +64,17 @@ class LOFClass () {
 		LOF.map(values=>(values._1,(values._2._1/values._2._2)))
 	}
 	
-	
+	def maxFunction(neighborVal:Array[Long,Double], Int:k): Array[Long,Double] = { 
+		var max=0;
+		x.foreach(
+			(id: Long, distance:Double) => 
+			max = (distance,k).max
+			println(distance)
+			neighborVal(id,max)
+			)
+		neighborVal
+  		
+	} 
 	def density(xs: Iterable[Double]) = {
 		xs.size / xs.sum
 	

@@ -27,7 +27,7 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 			val LOFvar = new LOFClass()
 			val neighbors = LOFvar.getNNeighbors(fileName,sortedList(0),sqlContext,bucketWidth)
 			val kDistance=LOFvar.getKDistance(neighbors,sortedList(0),sqlContext)
-			// val localReachDist = LOFvar.getReachDistance(filteredNeighbors,kDistance)
+			val localReachDist = LOFvar.getReachDistance(neighbors,kDistance)
 			// val LOF=LOFvar.getLOF(localReachDist,filteredNeighbors)
 			// LOFList+=LOF
 		
