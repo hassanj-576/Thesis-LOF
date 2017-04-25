@@ -78,10 +78,10 @@ class LOFClass () {
 		LOF.map(values=>(values._1,(values._2._1/values._2._2)))
 	}
 	
-	def maxFunction(neighborVal:Array[(Long,Double)]): Array[(Long,Double)] = { 
+	// def maxFunction(neighborVal:Array[(Long,Double)]): Array[(Long,Double)] = { 
 		
 		
-	} 
+	// } 
 	def density(xs: Iterable[Double]) = {
 		xs.size / xs.sum
 	
