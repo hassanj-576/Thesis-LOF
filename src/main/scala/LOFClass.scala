@@ -30,8 +30,6 @@ class LOFClass () {
 		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(10).setSignatureLength(64).setBucketWidth(bucketWidth).train(finalVector)
 		val neighbors = annModel.neighbors(minPoints)
 		val neighborsDF = neighbors.toDF()
-		neighborsDF.registerTempTable("tab1")
-        sqlContext.sql("select size(_2) from tab1").show()
 		neighborsDF
 	
 	}
@@ -40,6 +38,7 @@ class LOFClass () {
 		val rejected=neighborsDF.where("size(_2)=="+k)
 		rejected.registerTempTable("df")
 		val kDistance= sqlContext.sql("SELECT _1,_2["+(k-1)+"]['_2'] FROM df")
+		kDistance
 		// val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
 		// val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2)))
 		// kDistance
