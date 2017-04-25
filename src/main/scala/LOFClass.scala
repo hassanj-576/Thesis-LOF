@@ -45,16 +45,7 @@ class LOFClass () {
 	def getReachDistance(neighbors:DataFrame,kDistance:DataFrame,sqlContext:SQLContext):DataFrame= {
 		import sqlContext.implicits._
 		neighbors.registerTempTable("nTemp")
-		sqlContext.udf.register("maxUDF", (givenVal: Array[(Long,Double)]) => 
-			(
-				givenVal.foreach{
-					v=>
-					println(v._2)
-
-				}
-				givenVal
-			)
-		)
+		sqlContext.udf.register("maxUDF", maxFunction , Array[(Long,Double)])
 		sqlContext.sql("SELECT _1, maxUDF(_2) FROM nTemp").show()
 		neighbors
 		// neighbors.withColumn("upper", maxUDF(_2)).show
@@ -76,17 +67,16 @@ class LOFClass () {
 		LOF.map(values=>(values._1,(values._2._1/values._2._2)))
 	}
 	
-	// def maxFunction(neighborVal:Array[Long,Double], Int:k): Array[Long,Double] = { 
-	// 	var max=0;
-	// 	x.foreach(
-	// 		(id: Long, distance:Double) => 
-	// 		max = (distance,k).max
-	// 		println(distance)
-	// 		neighborVal(id,max)
-	// 		)
-	// 	neighborVal
+	def maxFunction(neighborVal:Array[(Long,Double)]): Array[(Long,Double)] = { 
+		var max=0;
+		neighborVal.foreach(
+			(id: Long, distance:Double) => 
+			println(distance)
+			neighborVal(id,10)
+			)
+		neighborVal
   		
-	// } 
+	} 
 	def density(xs: Iterable[Double]) = {
 		xs.size / xs.sum
 	
