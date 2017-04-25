@@ -53,7 +53,7 @@ class LOFClass () {
 			{
 				val returnArray = Array()
 				neighborVal.foreach(x=>
-					Math.max(10,x(1))
+					Math.max(10,x(1).toDouble)
 					)
 				println(neighborVal)
 				neighborVal
