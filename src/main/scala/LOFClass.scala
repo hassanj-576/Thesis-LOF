@@ -52,6 +52,7 @@ class LOFClass () {
 					println(v._2)
 
 				}
+				givenVal
 			)
 		)
 		sqlContext.sql("SELECT _1, maxUDF(_2) FROM nTemp").show()
