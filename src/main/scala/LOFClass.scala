@@ -51,9 +51,12 @@ class LOFClass () {
 		neighbors.printSchema()
 		def maxUDF=udf((neighborVal:Seq[Row]) => 
 			{
-				neighborVal.foreach(x=> 10)
-				val returnVal= neighborVal.toArray
-				returnVal
+				val returnArray = Array()
+				for( a <- 0 to neighborVal.size){
+					println(neighborVal(a)(1))
+				}
+				val tempReturn =10
+				tempReturn
 			 }
 
 
