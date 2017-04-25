@@ -40,7 +40,7 @@ class LOFClass () {
 		val rejected=neighborsDF.where("size(_2)=="+k)
 		rejected.select("_2").show()
 		rejected.registerTempTable("df")
-		val kDistance= sqlContext.sql("SELECT _2[10][2] FROM df").show()
+		val kDistance= sqlContext.sql("SELECT _2[10] FROM df").show()
 		
 		rejected.show()
 		rejected
