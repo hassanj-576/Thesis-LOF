@@ -44,9 +44,15 @@ class LOFClass () {
 
 	def getReachDistance(neighbors:DataFrame,kDistance:DataFrame,sqlContext:SQLContext):DataFrame= {
 		import sqlContext.implicits._
-		val maxUDF = udf(maxFunction)
-		neighbors.withColumn("upper", maxUDF(_2)).show
+		neighbors.registerTempTable("nTemp")
+		sqlContext.udf.register("maxUDF", (givenVal: Array(id:Long,distance:Double)) => (
+			(distance,10).max
+			)
+		)
+		sqlContext.sql("SELECT _1, maxUDF(_2) FROM nTemp").show()
 		neighbors
+		// neighbors.withColumn("upper", maxUDF(_2)).show
+		// neighbors
 		// val flatNeighbors = neighbors.flatMapValues(x=>x).map(values=>(values._2._1,(values._1,values._2._2))).join(kDistance).map(y=>(y._2._1._1,y._2._2.max(y._2._1._2)))
 		// val localReachDistance = flatNeighbors.combineByKey((values)=> (values.toDouble, 1),(x:(Double,Int), values)=> (x._1 + values, x._2 + 1), (x:(Double,Int), y:(Double,Int))=>(x._1 + y._1, x._2+ y._2)).map(values=>(values._1,(values._2._2/values._2._1)))
 		// localReachDistance
