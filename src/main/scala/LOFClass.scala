@@ -70,8 +70,8 @@ class LOFClass () {
 	def maxFunction(neighborVal:Array[(Long,Double)]): Array[(Long,Double)] = { 
 		var max=0;
 		neighborVal.foreach{
-			(id: Long, distance:Double) => 
-			println(distance)
+			x=> 
+			println(x._2)
 			neighborVal(0)=(99,99.99)
 		}
 		neighborVal
