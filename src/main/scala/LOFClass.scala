@@ -52,11 +52,11 @@ class LOFClass () {
 		def maxUDF=udf((neighborVal:Seq[Row]) => 
 			{
 				val returnArray = Array()
-				for( a <- 0 to neighborVal.size){
-					println(neighborVal(a)(1))
+				for( a <- 0 to neighborVal.size-1){
+					returnArray:+ Math.max(10,neighborVal(a)(1))
 				}
 				val tempReturn =10
-				tempReturn
+				returnArray
 			 }
 
 
