@@ -64,7 +64,8 @@ class LOFClass () {
 				// val tempReturn =10
 				// buf.foreach(println)
 				// buf
-			 neighborVal
+			 val returnVal=10
+			 returnVal
 						 
 			 }
 
