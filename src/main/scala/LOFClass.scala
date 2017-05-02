@@ -44,35 +44,37 @@ class LOFClass () {
 	}
 
 	def getReachDistance(neighbors:DataFrame,kDistance:DataFrame,sqlContext:SQLContext):DataFrame= {
-		// import sqlContext.implicits._
-		// neighbors.registerTempTable("nTemp")
-		// //sqlContext.udf.register("maxUDF", maxFunction _)
-		// // sqlContext.sql("SELECT _1, maxUDF(_2) FROM nTemp").show()
-		// // neighbors
-		// neighbors.printSchema()
-		// def maxUDF=udf((neighborVal:Seq[Row],kDistance:DataFrame) => 
-		// 	{
-		// 		kDistance.show()
-		// 		//neighborVal.map(x=>x(1).toDouble)
-		// 		val buf = new ListBuffer[Double]             
-		// 		for( a <- 0 to neighborVal.size-1){
-		// 			buf+=Math.max(10.0,neighborVal(a).getDouble(1))
-		// 			//returnArray:+10
-		// 		}
-		// 		val tempReturn =10
-		// 		buf.foreach(println)
-		// 		buf
-		// 	 }
-
-
-		//  )
-		// val newTable=neighbors.withColumn("upper", maxUDF(neighbors("_2"),kDistance))
-		// newTable.registerTempTable("nTemp")
-		// sqlContext.sql("SELECT upper FROM nTemp").show()
+		import sqlContext.implicits._
+		neighbors.registerTempTable("nTemp")
+		//sqlContext.udf.register("maxUDF", maxFunction _)
+		// sqlContext.sql("SELECT _1, maxUDF(_2) FROM nTemp").show()
 		// neighbors
-		val flatNeighbors = neighbors.flatMapValues(x=>x).map(values=>(values._2._1,(values._1,values._2._2))).join(kDistance).map(y=>(y._2._1._1,y._2._2.max(y._2._1._2)))
-		val localReachDistance = flatNeighbors.combineByKey((values)=> (values.toDouble, 1),(x:(Double,Int), values)=> (x._1 + values, x._2 + 1), (x:(Double,Int), y:(Double,Int))=>(x._1 + y._1, x._2+ y._2)).map(values=>(values._1,(values._2._2/values._2._1)))
-		localReachDistance
+		neighbors.printSchema()
+		def maxUDF=udf((neighborVal:Seq[Row],kDistance:DataFrame) => 
+			{
+
+				getNNeighbors("GoToHell.txt",10,sqlContext,10)
+				// kDistance.show()
+				// //neighborVal.map(x=>x(1).toDouble)
+				// val buf = new ListBuffer[Double]             
+				// for( a <- 0 to neighborVal.size-1){
+				// 	buf+=Math.max(10.0,neighborVal(a).getDouble(1))
+				// 	//returnArray:+10
+				// }
+				// val tempReturn =10
+				// buf.foreach(println)
+				// buf
+			 }
+
+
+		 )
+		val newTable=neighbors.withColumn("upper", maxUDF(neighbors("_2"),kDistance))
+		newTable.registerTempTable("nTemp")
+		sqlContext.sql("SELECT upper FROM nTemp").show()
+		neighbors
+		// val flatNeighbors = neighbors.flatMapValues(x=>x).map(values=>(values._2._1,(values._1,values._2._2))).join(kDistance).map(y=>(y._2._1._1,y._2._2.max(y._2._1._2)))
+		// val localReachDistance = flatNeighbors.combineByKey((values)=> (values.toDouble, 1),(x:(Double,Int), values)=> (x._1 + values, x._2 + 1), (x:(Double,Int), y:(Double,Int))=>(x._1 + y._1, x._2+ y._2)).map(values=>(values._1,(values._2._2/values._2._1)))
+		// localReachDistance
 		// neighbors
 		
 	} 
