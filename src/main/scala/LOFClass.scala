@@ -65,6 +65,8 @@ class LOFClass () {
 				// buf.foreach(println)
 				// buf
 			 }
+			 val tempValue=10
+			 tempValue
 
 
 		 )
