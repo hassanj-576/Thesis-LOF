@@ -50,7 +50,7 @@ class LOFClass () {
 		// sqlContext.sql("SELECT _1, maxUDF(_2) FROM nTemp").show()
 		// neighbors
 		neighbors.printSchema()
-		def maxUDF=udf((neighborVal:Seq[Row],kDistance:DataFrame) => 
+		def maxUDF=udf((neighborVal:Seq[Row]) => 
 			{
 
 				getNNeighbors("GoToHell.txt",10,sqlContext,10)
@@ -70,7 +70,7 @@ class LOFClass () {
 
 
 		 )
-		val newTable=neighbors.withColumn("upper", maxUDF(neighbors("_2"),kDistance))
+		val newTable=neighbors.withColumn("upper", maxUDF(neighbors("_2")))
 		newTable.registerTempTable("nTemp")
 		sqlContext.sql("SELECT upper FROM nTemp").show()
 		neighbors
