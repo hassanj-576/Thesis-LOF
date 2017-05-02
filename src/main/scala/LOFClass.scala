@@ -53,7 +53,8 @@ class LOFClass () {
 		def maxUDF=udf((neighborVal:Seq[Row]) => 
 			{
 
-				getNNeighbors("dataSmall.csv",10,sqlContext,10)
+				getNNeighbors("dataSmall.csv",10,sqlContext,10).show()
+
 				// kDistance.show()
 				// //neighborVal.map(x=>x(1).toDouble)
 				// val buf = new ListBuffer[Double]             
