@@ -36,7 +36,7 @@ class LOFClass () {
 		val rejected = neighbors.filter(values=> values._2.size>=k)
 		val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
 		val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2)))
-		kDistance
+                kDistance
 	}
 
 	def getReachDistance(neighbors:RDD[(Long, Array[(Long, Double)])],kDistance:RDD[((Long,Double))]):RDD[(Long,Double)]= {
