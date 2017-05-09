@@ -22,7 +22,7 @@ object TestMain {
 	testRdd= textFile.map(x=>x.toInt+1)
 	val newTestRdd = testRdd.map(x=>x.toInt+1)
 	testRdd.setName("testRdd")
-	println(testRdd.count)
+	//println(testRdd.count)
 	println("Iteration: "+a)
 	testRdd.foreach(println)
 	println("New Test RDD: "+newTestRdd.count)
