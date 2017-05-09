@@ -10,6 +10,8 @@ import org.apache.spark.rdd.RDD
 object TestMain {
   
   def main(args: Array[String]) {
+  	val conf = new SparkConf().setMaster("local").setAppName("My App")
+	val sc = new SparkContext(conf)
   	println("Hello World")
   }
 
