@@ -25,8 +25,9 @@ object TestMain {
 		val textFile = sc.textFile(fileName)
 		testRdd= textFile.map(x=>x.toInt+1)
 		testRdd.setName("testRdd")
-		println(testRdd.count)
 		testRdd.cache()
+		println("RDD COUNT: "+testRdd.count)
+
 		
 		val newTestRdd = testRdd.map(x=>x.toInt+1)
 		
