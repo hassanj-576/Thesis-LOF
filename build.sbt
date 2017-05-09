@@ -9,4 +9,4 @@ libraryDependencies += "org.apache.spark" % "spark-mllib_2.10" % "2.1.0" % "prov
 libraryDependencies += "org.apache.spark" % "spark-sql_2.10" % "2.1.0" % "provided"
 libraryDependencies += "com.databricks" % "spark-csv_2.11" % "1.2.0"
 libraryDependencies += "com.opencsv" % "opencsv" % "3.9"
-mainClass in (Compile, run) := Some("main.scala.test")  
+mainClass in (Compile, run) := Some("main.scala.TestMain")  
