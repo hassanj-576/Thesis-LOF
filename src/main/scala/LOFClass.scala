@@ -33,9 +33,7 @@ class LOFClass () {
 	
 	}
 	def getKDistance(neighbors:RDD[(Long, Array[(Long, Double)])],k:Integer):RDD[((Long,Double))]={
-		println(neighbors.first()._2.size)
 		val rejected = neighbors.filter(values=> values._2.size>k)
-		println("Rejected Count :"+rejected.count)
 		val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
 		val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2)))
 		
