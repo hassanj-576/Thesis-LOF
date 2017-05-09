@@ -15,6 +15,14 @@ object TestMain {
   	println("Hello World")
   	val textFile = sc.textFile("rddInput.txt")
   	println(textFile.count())
+  	type rddType = (Long)
+	var testRdd = sc.emptyRDD[rddType]
+
+	testRdd= textFile.map(x=>x+1)
+	testRdd.setName("testRdd")
+	testRdd.cache()
+	println(testRdd.count)
+
   }
 
 }
