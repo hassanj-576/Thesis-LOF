@@ -26,6 +26,8 @@ object TestMain {
 	println("Iteration: "+a)
 	//testRdd.foreach(x=> println("Value: "+x))
 	println("Test RDD Size: "+testRdd.count)
+	println("Printing the entire thing")
+	testRdd.foreach(println)
 	println("New Test RDD: "+newTestRdd.count)
 	testRdd.cache()
 	}
