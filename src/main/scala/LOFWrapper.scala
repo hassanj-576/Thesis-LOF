@@ -33,6 +33,7 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 			if(x!=sortedList(0)){
 				if(fasterCheck==0){
 					filteredNeighbors = LOFvar.getNNeighbors(fileName,x,sc,bucketWidth)
+					filteredNeighbors.cache
 				}
 				else{
 					filteredNeighbors = neighborWithzip.map(values=> (values._1,values._2.filter(z=>z._1<x).map(x=>x._2)))
