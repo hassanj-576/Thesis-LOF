@@ -47,6 +47,7 @@ class LOFClass () {
 			}
 		}
 		val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2)))
+		println(kDistance.first())
         kDistance
 	}
 
