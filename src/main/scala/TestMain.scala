@@ -18,10 +18,14 @@ object TestMain {
   	type rddType = (Long)
 	var testRdd = sc.emptyRDD[rddType]
 
+	for( a <- 1 to 2){
 	testRdd= textFile.map(x=>x.toInt+1)
 	testRdd.setName("testRdd")
-	testRdd.cache()
 	println(testRdd.count)
+	println("Iteration: "+a)
+	testRdd.foreach(println)
+	testRdd.cache()
+	}
 
   }
 
