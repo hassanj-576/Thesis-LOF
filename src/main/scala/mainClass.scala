@@ -29,7 +29,7 @@ object mainClass {
 		val lofWrapper = new LOFWrapper(faster,fileName,kList,sc,bucketWidth)
 		val lofVal = lofWrapper.getLOF()
 		for (x <- lofVal) {
-			println(x.size)
+			println(x.count)
 		}
 
 		//Comment from stones		
