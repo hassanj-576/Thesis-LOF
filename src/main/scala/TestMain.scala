@@ -24,6 +24,8 @@ object TestMain {
 		}
 		val textFile = sc.textFile(fileName)
 		testRdd= textFile.map(x=>x.toInt+1)
+		testRdd.cache()
+		println(testRdd.count)
 		val newTestRdd = testRdd.map(x=>x.toInt+1)
 		testRdd.setName("testRdd")
 		//println(testRdd.count)
@@ -36,7 +38,6 @@ object TestMain {
 		// testRdd.foreach(println)
 		println("Printing new test rdd")
 		newTestRdd.foreach(println)
-		testRdd.cache()
 	}
 
   }
