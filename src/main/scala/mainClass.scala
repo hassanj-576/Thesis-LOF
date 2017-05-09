@@ -29,7 +29,7 @@ object mainClass {
 		val lofWrapper = new LOFWrapper(faster,fileName,kList,sc,bucketWidth)
 		val lofVal = lofWrapper.getLOF()
 		for (x <- lofVal) {
-			x.sortBy(_._2).foreach(println)
+			println(x.size)
 		}
 
 		//Comment from stones		

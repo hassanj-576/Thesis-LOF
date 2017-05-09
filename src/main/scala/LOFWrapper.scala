@@ -32,10 +32,12 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 		 for (x <- sortedList) {
 			if(x!=sortedList(0)){
 				if(fasterCheck==0){
+					println("Calculating Value Again")
 					filteredNeighbors = LOFvar.getNNeighbors(fileName,x,sc,bucketWidth)
 					filteredNeighbors.cache
 				}
 				else{
+					println("Calculating Value From Previous")
 					filteredNeighbors = neighborWithzip.map(values=> (values._1,values._2.filter(z=>z._1<x).map(x=>x._2)))
 					filteredNeighbors.cache
 				}
