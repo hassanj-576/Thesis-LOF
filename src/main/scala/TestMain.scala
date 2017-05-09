@@ -47,6 +47,7 @@ object TestMain {
 		println("Printing new test rdd")
 		newTestRdd.foreach(println)
 		testRdd.setName("testRdd")
+		println("PRINTING RDD NAMEL: "+testRdd.name)
 	}
 
   }
