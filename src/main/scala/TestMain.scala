@@ -26,6 +26,7 @@ object TestMain {
 		println()
 		if(a==2){
 			fileName="rddInput2.txt"
+			testRdd.setName("testRdd")
 		}
 		val textFile = sc.textFile(fileName)
 		testRdd= textFile.map(x=>x.toInt+1)
