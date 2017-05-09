@@ -26,7 +26,7 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 		val LOFvar = new LOFClass()
 		val neighbors = LOFvar.getNNeighbors(fileName,sortedList(0),sc,bucketWidth)
 		val neighborWithzip= neighbors.map(values=>(values._1,values._2.zipWithIndex.map(y=>(y._2,y._1))))
-		neighborWithzip.cache
+		//neighborWithzip.cache
 		var filteredNeighbors=neighbors
 		//neighborWithzip.first()._2.foreach(println)
 		 for (x <- sortedList) {
@@ -39,7 +39,7 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 				else{
 					println("Calculating Value From Previous")
 					filteredNeighbors = neighborWithzip.map(values=> (values._1,values._2.filter(z=>z._1<x).map(x=>x._2)))
-					filteredNeighbors.cache
+					//filteredNeighbors.cache
 				}
 			}
 			val kDistance=LOFvar.getKDistance(filteredNeighbors,(x-1))
