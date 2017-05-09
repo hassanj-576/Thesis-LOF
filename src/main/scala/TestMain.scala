@@ -25,7 +25,8 @@ object TestMain {
 		val textFile = sc.textFile(fileName)
 		testRdd= textFile.map(x=>x.toInt+1)
 		//val newTestRdd = testRdd.map(x=>x.toInt+1)
-		testRdd.setName("testRdd")
+		testRdd.setName("testRdd2")
+		testRdd.cache()
 		//println(testRdd.count)
 		println("Iteration: "+a)
 		//testRdd.foreach(x=> println("Value: "+x))
@@ -35,6 +36,7 @@ object TestMain {
 		println("Printing the entire thing Second time ")
 		testRdd.foreach(println)
 		//println("New Test RDD: "+newTestRdd.count)
+		testRdd.setName("testRdd")
 		testRdd.cache()
 	}
 
