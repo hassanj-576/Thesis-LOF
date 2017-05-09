@@ -18,7 +18,7 @@ object TestMain {
   	type rddType = (Long)
 	var testRdd = sc.emptyRDD[rddType]
 
-	testRdd= textFile.map(x=>x+1)
+	testRdd= textFile.map(x=>x.asInstanceOf(Int)+1)
 	testRdd.setName("testRdd")
 	testRdd.cache()
 	println(testRdd.count)
