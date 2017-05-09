@@ -13,6 +13,8 @@ object TestMain {
   	val conf = new SparkConf().setMaster("local").setAppName("My App")
 	val sc = new SparkContext(conf)
   	println("Hello World")
+  	val textFile = sc.textFile("rddInput.txt")
+  	println(textFile.count())
   }
 
 }
