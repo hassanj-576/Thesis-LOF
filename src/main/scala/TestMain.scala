@@ -19,6 +19,11 @@ object TestMain {
 	var testRdd = sc.emptyRDD[rddType]
 	var fileName="rddInput.txt"
 	for( a <- 1 to 2){
+		println()
+		println()
+		println("Iteration: "+a)
+		println()
+		println()
 		if(a==2){
 			fileName="rddInput2.txt"
 		}
@@ -32,7 +37,7 @@ object TestMain {
 		val newTestRdd = testRdd.map(x=>x.toInt+1)
 		
 		//println(testRdd.count)
-		println("Iteration: "+a)
+		
 		//testRdd.foreach(x=> println("Value: "+x))
 		//println("Test RDD Size: "+testRdd.count)
 		// println("Printing the entire thing")
