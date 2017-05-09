@@ -24,7 +24,7 @@ object TestMain {
 	testRdd.setName("testRdd")
 	//println(testRdd.count)
 	println("Iteration: "+a)
-	testRdd.foreach(println)
+	testRdd.foreach(x=> println("Value: "+x))
 	println("New Test RDD: "+newTestRdd.count)
 	testRdd.cache()
 	}
