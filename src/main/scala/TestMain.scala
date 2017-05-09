@@ -20,6 +20,7 @@ object TestMain {
 
 	for( a <- 1 to 2){
 	testRdd= textFile.map(x=>x.toInt+1)
+	val newTestRdd = testRdd.map(x=>x.toInt+1)
 	testRdd.setName("testRdd")
 	println(testRdd.count)
 	println("Iteration: "+a)
