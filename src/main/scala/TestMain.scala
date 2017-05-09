@@ -24,10 +24,12 @@ object TestMain {
 		}
 		val textFile = sc.textFile(fileName)
 		testRdd= textFile.map(x=>x.toInt+1)
-		//testRdd.cache()
-		println(testRdd.count)
-		val newTestRdd = testRdd.map(x=>x.toInt+1)
 		testRdd.setName("testRdd")
+		testRdd.cache()
+		println(testRdd.count)
+		
+		val newTestRdd = testRdd.map(x=>x.toInt+1)
+		
 		//println(testRdd.count)
 		println("Iteration: "+a)
 		//testRdd.foreach(x=> println("Value: "+x))
