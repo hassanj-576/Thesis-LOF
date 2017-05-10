@@ -25,6 +25,11 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 		val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
 		val LOFvar = new LOFClass()
 		for (x <- sortedList) {
+			println()
+			println()
+			println("Iteration: "+x)
+			println()
+			println()
 			val nRdd = sc.parallelize(Array(x))
 			nRdd.setName("nRdd")
 			nRdd.cache
