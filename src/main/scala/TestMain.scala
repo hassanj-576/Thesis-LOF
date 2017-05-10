@@ -32,9 +32,9 @@ object TestMain {
 		testRdd= textFile.map(x=>x.toInt+1)
 		testRdd.setName("testRdd")
 		//testRdd.setName("somethingelse")
-		println("PRINTING TEST RDD : "+testRdd.count)
+		println("PRINTING TEST RDD : "+testRdd.id)
 		//testRdd.cache
-		//testRdd.foreach(println)
+		testRdd.foreach()
 		testRdd.cache
 		val newTestRdd = testRdd.map(x=>x.toInt+1)
 		
