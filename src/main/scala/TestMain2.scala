@@ -31,31 +31,25 @@ object TestMain2 {
 			println("Iteration: "+a)
 			println()
 			println()
-			val neighbors = LOFvar.getNNeighbors(fileName,4,sc,bucketWidth)
-			neighbors.setName("superSet")
-			neighbors.first()._2.foreach(println)
-			neighbors.cache
-			val kDistance=LOFvar.getKDistance(neighbors,(3))
-			println(kDistance.count)
+			// val neighbors = LOFvar.getNNeighbors(fileName,4,sc,bucketWidth)
+			// neighbors.setName("superSet")
+			// neighbors.first()._2.foreach(println)
+			// neighbors.cache
+			// val kDistance=LOFvar.getKDistance(neighbors,(3))
+			// println(kDistance.count)
 		}
-
-		/*val neighborWithzip= neighbors.map(values=>(values._1,values._2.zipWithIndex.map(y=>(y._2,y._1))))
-		var filteredNeighbors=neighbors
-		//neighborWithzip.first()._2.foreach(println)
 		 for (x <- sortedList) {
-			if(x!=sortedList(0)){
-				if(fasterCheck==0){
-					filteredNeighbors = LOFvar.getNNeighbors(fileName,x,sc,bucketWidth)
-				}
-				else{
-					filteredNeighbors = neighborWithzip.map(values=> (values._1,values._2.filter(z=>z._1<x).map(x=>x._2)))
-				}
-			}
-			val kDistance=LOFvar.getKDistance(filteredNeighbors,(x-1))
-			val localReachDist = LOFvar.getReachDistance(filteredNeighbors,kDistance)
-			val LOF=LOFvar.getLOF(localReachDist,filteredNeighbors)
+		 	val neighbors = LOFvar.getNNeighbors(fileName,4,sc,bucketWidth)
+		 	neighbors.setName("superSet")
+			//neighbors.first()._2.foreach(println)
+			neighbors.count
+			neighbors.cache
+			val kDistance=LOFvar.getKDistance(neighbors,3)
+			val localReachDist = LOFvar.getReachDistance(neighbors,kDistance)
+			val LOF=LOFvar.getLOF(localReachDist,neighbors)
+			LOF.take(10).foreach(println)
 			LOFList+=LOF
-		} */
+		} 
 		
 		LOFList
 	}
