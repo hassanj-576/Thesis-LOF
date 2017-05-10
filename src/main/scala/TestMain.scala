@@ -30,10 +30,11 @@ object TestMain {
 		}
 		val textFile = sc.textFile(fileName)
 		testRdd= textFile.map(x=>x.toInt+1)
-		testRdd.setName("testRdd")
+		testRdd.setName("somethingelse")
 		println("PRINTING TEST RDD")
-		testRdd.foreach(println)
 		testRdd.cache
+		testRdd.foreach(println)
+		testRdd.setName("testRdd")
 		println("RDD ID: "+testRdd.id)
 		
 		
