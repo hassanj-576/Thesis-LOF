@@ -74,7 +74,7 @@ object TestMain2 {
 		val sc = new SparkContext(conf)
 		val lofVal = getLOF(faster,fileName,kList,sc,bucketWidth)
 		for (x <- lofVal) {
-			x.sortBy(_._2).foreach(println)
+			x.sortBy(_._2)
 		}
 
 		//Comment from stones		
