@@ -80,8 +80,10 @@ object TestMain2 {
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
 		val lofVal = getLOF(faster,fileName,kList,sc,bucketWidth)
+		var z=0
 		for (x <- lofVal) {
-			x.sortBy(_._2)
+			x.sortBy(_._2).coalesce(1).saveAsTextFile("newfile"+z+".txt")
+			z=z+1
 		}
 
 		//Comment from stones		
