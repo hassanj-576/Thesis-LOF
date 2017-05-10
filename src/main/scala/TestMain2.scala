@@ -33,7 +33,7 @@ object TestMain2 {
 			println()
 			val neighbors = LOFvar.getNNeighbors(fileName,4,sc,bucketWidth)
 			neighbors.setName("superSet")
-			println(neighbors.count())
+			neighbors.first()._2.foreach(println)
 			neighbors.cache
 			val kDistance=LOFvar.getKDistance(neighbors,(4))
 			kDistance.foreach(println)
