@@ -25,9 +25,15 @@ object TestMain2 {
 		val sortedList=kList.sortWith(_ > _)
 		val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
 		val LOFvar = new LOFClass()
-		val neighbors = LOFvar.getNNeighbors(fileName,sortedList(0),sc,bucketWidth)
-		println(neighbors.count())
-		neighbors.cache
+		for( a <- 1 to 2){
+			val neighbors = LOFvar.getNNeighbors(fileName,4,sc,bucketWidth)
+			neighbors.setName("superSet")
+			println(neighbors.count())
+			neighbors.cache
+			val kDistance=LOFvar.getKDistance(filteredNeighbors,(4))
+			kDistance.foreach(println)
+		}
+
 		/*val neighborWithzip= neighbors.map(values=>(values._1,values._2.zipWithIndex.map(y=>(y._2,y._1))))
 		var filteredNeighbors=neighbors
 		//neighborWithzip.first()._2.foreach(println)
