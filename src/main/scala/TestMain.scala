@@ -50,6 +50,9 @@ object TestMain {
 		newTestRdd.foreach(println)
 		//testRdd.setName("testRdd")
 	}
+	for ((id: Int,rdd: org.apache.spark.rdd.RDD[_])<- sc.getPersistentRDDs ){
+		  println("PERSISTANT RDD NAME: "+rdd.name)
+	}
 
   }
 
