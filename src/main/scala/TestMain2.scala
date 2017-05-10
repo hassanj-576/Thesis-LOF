@@ -26,6 +26,11 @@ object TestMain2 {
 		val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
 		val LOFvar = new LOFClass()
 		for( a <- 1 to 2){
+			println()
+			println()
+			println("Iteration: "+a)
+			println()
+			println()
 			val neighbors = LOFvar.getNNeighbors(fileName,4,sc,bucketWidth)
 			neighbors.setName("superSet")
 			println(neighbors.count())
