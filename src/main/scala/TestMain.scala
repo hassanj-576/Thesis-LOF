@@ -33,7 +33,7 @@ object TestMain {
 		//testRdd.setName("testRdd")
 		testRdd.cache
 		println("RDD COUNT: "+testRdd.count)
-		println("RDD ID: "testRdd.id)
+		println("RDD ID: "+testRdd.id)
 		
 		
 		val newTestRdd = testRdd.map(x=>x.toInt+1)
