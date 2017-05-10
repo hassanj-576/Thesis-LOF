@@ -25,20 +25,25 @@ object TestMain2 {
 		val sortedList=kList.sortWith(_ > _)
 		val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
 		val LOFvar = new LOFClass()
-		for( a <- 1 to 2){
-			println()
-			println()
-			println("Iteration: "+a)
-			println()
-			println()
-			// val neighbors = LOFvar.getNNeighbors(fileName,4,sc,bucketWidth)
-			// neighbors.setName("superSet")
-			// neighbors.first()._2.foreach(println)
-			// neighbors.cache
-			// val kDistance=LOFvar.getKDistance(neighbors,(3))
-			// println(kDistance.count)
-		}
+		// for( a <- 1 to 2){
+		// 	println()
+		// 	println()
+		// 	println("Iteration: "+a)
+		// 	println()
+		// 	println()
+		// 	// val neighbors = LOFvar.getNNeighbors(fileName,4,sc,bucketWidth)
+		// 	// neighbors.setName("superSet")
+		// 	// neighbors.first()._2.foreach(println)
+		// 	// neighbors.cache
+		// 	// val kDistance=LOFvar.getKDistance(neighbors,(3))
+		// 	// println(kDistance.count)
+		// }
 		 for (x <- sortedList) {
+		 	println()
+			println()
+			println("Iteration: "+x)
+			println()
+			println()
 		 	val neighbors = LOFvar.getNNeighbors(fileName,4,sc,bucketWidth)
 		 	neighbors.setName("superSet")
 			//neighbors.first()._2.foreach(println)
@@ -47,7 +52,8 @@ object TestMain2 {
 			val kDistance=LOFvar.getKDistance(neighbors,3)
 			val localReachDist = LOFvar.getReachDistance(neighbors,kDistance)
 			val LOF=LOFvar.getLOF(localReachDist,neighbors)
-			LOF.take(10).foreach(println)
+			//LOF.take(10).foreach(println)
+			println(LOF.first())
 			LOFList+=LOF
 		} 
 		
