@@ -7,7 +7,7 @@ import collection.JavaConversions._
 import org.apache.spark.rdd.RDD
 
 
-object TestMain {
+object TestMain3 {
   
   def main(args: Array[String]) {
   	val conf = new SparkConf().setMaster("local").setAppName("My App")
