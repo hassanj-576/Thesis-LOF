@@ -60,6 +60,7 @@ object TestMain2 {
 			val LOF=LOFvar.getLOF(localReachDist,neighbors)
 			//LOF.take(10).foreach(println)
 			println(LOF.first())
+			LOF.take(5).foreach(println)
 			LOFList+=LOF
 		} 
 		
