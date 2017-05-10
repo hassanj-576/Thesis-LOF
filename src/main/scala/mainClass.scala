@@ -28,8 +28,10 @@ object mainClass {
 		val sc = new SparkContext(conf)
 		val lofWrapper = new LOFWrapper(faster,fileName,kList,sc,bucketWidth)
 		val lofVal = lofWrapper.getLOF()
+		var z=0
 		for (x <- lofVal) {
-			x.sortBy(_._2).foreach(println)
+			x.sortBy(_._2).coalesce(1).saveAsTextFile("LOF"+z)
+			z=z+1
 		}
 
 		//Comment from stones		
