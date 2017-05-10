@@ -19,7 +19,7 @@ object TestMain {
 	var testRdd = sc.emptyRDD[rddType]
 	var fileName="rddInput.txt"
 	for( a <- 1 to 5){
-		val nRdd = sc.parallelize(Seq[a])
+		val nRdd = sc.parallelize([x])
 		nRdd.setName("nRdd")
 		nRdd.cache
 		nRdd.count
