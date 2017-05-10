@@ -36,10 +36,6 @@ object TestMain {
 		//testRdd.cache
 		testRdd.foreach(println)
 		testRdd.cache
-		println("RDD ID: PRINTING SECOND TIME: "+testRdd.id)
-		testRdd.foreach(println)
-		
-		
 		val newTestRdd = testRdd.map(x=>x.toInt+1)
 		
 		//println(testRdd.count)
