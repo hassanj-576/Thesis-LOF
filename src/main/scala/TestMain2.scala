@@ -52,7 +52,7 @@ object TestMain2 {
 		 	neighbors.setName("superSet")
 			//neighbors.first()._2.foreach(println)
 			//neighbors.count
-			neighbors.first().foreach(println)
+			neighbors.first()._2.foreach(println)
 			neighbors.cache
 
 			val kDistance=LOFvar.getKDistance(neighbors,x-1)
