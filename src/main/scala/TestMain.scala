@@ -18,7 +18,7 @@ object TestMain {
   	type rddType = (Long)
 	var testRdd = sc.emptyRDD[rddType]
 	var fileName="rddInput.txt"
-	for( a <- 1 to 2){
+	for( a <- 1 to 5){
 		println()
 		println()
 		println("Iteration: "+a)
