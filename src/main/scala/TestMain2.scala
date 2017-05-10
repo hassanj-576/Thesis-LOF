@@ -51,7 +51,7 @@ object TestMain2 {
 		 	val neighbors = LOFvar.getNNeighbors(fileName,x,sc,bucketWidth)
 		 	neighbors.setName("superSet")
 			//neighbors.first()._2.foreach(println)
-			neighbors.count
+			//neighbors.count
 			println(neighbors.first()._2.size)
 			neighbors.cache
 
