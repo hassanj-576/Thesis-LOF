@@ -32,7 +32,7 @@ object TestMain {
 		testRdd= textFile.map(x=>x.toInt+1)
 		testRdd.setName("testRdd")
 		println("PRINTING TEST RDD")
-		testRdd.foreach("Println")
+		testRdd.foreach("println")
 		testRdd.cache
 		println("RDD ID: "+testRdd.id)
 		
