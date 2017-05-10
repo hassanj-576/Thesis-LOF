@@ -35,8 +35,8 @@ object TestMain2 {
 			neighbors.setName("superSet")
 			neighbors.first()._2.foreach(println)
 			neighbors.cache
-			val kDistance=LOFvar.getKDistance(neighbors,(4))
-			kDistance.foreach(println)
+			val kDistance=LOFvar.getKDistance(neighbors,(3))
+			println(kDistance.size)
 		}
 
 		/*val neighborWithzip= neighbors.map(values=>(values._1,values._2.zipWithIndex.map(y=>(y._2,y._1))))
