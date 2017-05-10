@@ -52,8 +52,9 @@ object TestMain2 {
 		 	neighbors.setName("superSet")
 			//neighbors.first()._2.foreach(println)
 			neighbors.count
-			neighbors.cache
 			println(neighbors.first()._2.size)
+			neighbors.cache
+
 			val kDistance=LOFvar.getKDistance(neighbors,x-1)
 			val localReachDist = LOFvar.getReachDistance(neighbors,kDistance)
 			val LOF=LOFvar.getLOF(localReachDist,neighbors)
