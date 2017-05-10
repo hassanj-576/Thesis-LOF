@@ -35,6 +35,10 @@ object TestMain3 {
 		}
 
 	}
+		for ((id: Int,rdd: org.apache.spark.rdd.RDD[_])<- sc.getPersistentRDDs ){
+			println("PERSISTANT RDD NAME: "+rdd.name)
+		 
+		}
 	
 
   }
