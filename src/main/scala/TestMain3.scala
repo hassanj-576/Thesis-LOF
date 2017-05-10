@@ -30,6 +30,7 @@ object TestMain3 {
 		  	if(rdd.name=="nRdd"){
 		  		nInt=rdd.asInstanceOf[RDD[Int]].first()
 		  		println("nInt var: "+nInt)
+		  		println("nInt class: "nInt.getClass)
 		  		rdd.unpersist()
 		  }
 		}
