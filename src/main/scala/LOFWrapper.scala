@@ -10,6 +10,7 @@ import com.opencsv.CSVReader;
 import com.github.karlhigley.spark.neighbors.ANN
 import org.apache.spark.rdd.RDD
 import scala.collection.mutable.ArrayBuffer
+import org.apache.spark.storage.StorageLevel._
 
 
 class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:SparkContext,bWidth:Int) {
