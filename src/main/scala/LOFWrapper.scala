@@ -32,12 +32,12 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 			println()
 			val nRdd = sc.parallelize(Array(x))
 			nRdd.setName("nRdd")
-			nRdd.cache
+			nRdd.persist(StorageLevel.MEMORY_AND_DISK)
 			nRdd.count
 		 	val neighbors = LOFvar.getNNeighbors(fileName,x,sc,bucketWidth)
 		 	neighbors.setName("superSet")
 			neighbors.count
-			neighbors.cache
+			neighbors.persist(StorageLevel.MEMORY_AND_DISK)
 			val kDistance=LOFvar.getKDistance(neighbors,x-1)
 			val localReachDist = LOFvar.getReachDistance(neighbors,kDistance)
 			val LOF=LOFvar.getLOF(localReachDist,neighbors)
