@@ -26,15 +26,18 @@ object mainClass {
 		println( kList)
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
+		val t0 = System.nanoTime()
 		val lofWrapper = new LOFWrapper(faster,fileName,kList,sc,bucketWidth)
 		val lofVal = lofWrapper.getLOF()
+		val t1 = System.nanoTime()
 		var z=0
 		for (x <- lofVal) {
 			x.sortBy(_._2).coalesce(1).saveAsTextFile("newfile"+z+".txt")
 			z=z+1
 		}
 
-		//Comment from stones		
+		//Comment from stones	
+		println("Over All Total Time : "+(t1-t0))	
 		sc.stop()
 		
 	}

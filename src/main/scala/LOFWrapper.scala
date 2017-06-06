@@ -24,7 +24,9 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 		val sortedList=kList.sortWith(_ > _)
 		val LOFList= ArrayBuffer[RDD[(Long,Double)]]()
 		val LOFvar = new LOFClass()
+		val t0N = System.nanoTime()
 		val neighbors = LOFvar.getNNeighbors(fileName,sortedList(0),sc,bucketWidth)
+		val t1N = System.nanoTime()
 		val neighborWithzip= neighbors.map(values=>(values._1,values._2.zipWithIndex.map(y=>(y._2,y._1))))
 		neighborWithzip.cache
 		var filteredNeighbors=neighbors
@@ -47,7 +49,7 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 			val LOF=LOFvar.getLOF(localReachDist,filteredNeighbors)
 			LOFList+=LOF
 		} 
-		
+		println("Total Time for Neighbor: "+ (t1N-t0N))
 		LOFList
 	}
 }
