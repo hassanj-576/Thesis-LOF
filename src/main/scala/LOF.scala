@@ -68,7 +68,7 @@ object LOF {
 		val newNeighbors=rejected.map(values=>(values._1,values._2.map(x=>x._2).zipWithIndex.map(y=>(y._2,y._1))))
 		println(newNeighbors.first())
 		val kDistance = newNeighbors.map(values=> ((values._1,values._2.filter(x=>x._1==k)(0)._2)))
-		val kDistance2 = newNeighbors.map(values=> (values._1,1+values._2+1))
+		//val kDistance2 = newNeighbors.map(values=> (values._1,1+values._2+1))
 
 		//kDistance.collect()
 		kDistance
