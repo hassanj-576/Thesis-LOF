@@ -26,6 +26,7 @@ class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:Spark
 		val LOFvar = new LOFClass()
 		val t0N = System.nanoTime()
 		val neighbors = LOFvar.getNNeighbors(fileName,sortedList(0),sc,bucketWidth)
+		println(neighbors.count())
 		val t1N = System.nanoTime()
 		val neighborWithzip= neighbors.map(values=>(values._1,values._2.zipWithIndex.map(y=>(y._2,y._1))))
 		neighborWithzip.cache
