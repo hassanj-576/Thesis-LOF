@@ -20,16 +20,30 @@ open $OUTFILE, '>>', $files
 
 
 my $bucketWidth=600;
-print { $OUTFILE } "N,iteration,Time,\n";
+print { $OUTFILE } "N,iteration,fast,Time,\n";
 
 my $txt=".csv";
 my $output="output";
 my $N;
 for($N=10;$N<=20;$N=$N+10){
+	my $outputFile = `python dataGenerator.py $N$txt 1 $N 5`;
 	for($a=0;$a<3;$a=$a+1){
-			print { $OUTFILE } "$N,$a,";
-			my $outputFile = `python dataGenerator.py $N$txt 1 $N 5`;
+			print { $OUTFILE } "$N,$a,0,";
 			my $cmd = "spark-submit --master local[*] --driver-memory 256g --class main.scala.mainClass target/scala-2.10/spark_proj-assembly-1.0.jar 0 $N$txt $bucketWidth $N$output 10 9 8 7 6";
+			my @output = `$cmd`;
+			chomp @output;
+
+			foreach my $line (@output)
+			{
+					print { $OUTFILE } "$line"
+							or croak "Cannot write to $files: $OS_ERROR";
+			}
+			print { $OUTFILE } "\n";
+			my $outputFile2 = `rm -rf $N$output*`;
+	}
+	for($a=0;$a<3;$a=$a+1){
+			print { $OUTFILE } "$N,$a,1,";
+			my $cmd = "spark-submit --master local[*] --driver-memory 256g --class main.scala.mainClass target/scala-2.10/spark_proj-assembly-1.0.jar 1 $N$txt $bucketWidth $N$output 10 9 8 7 6";
 			my @output = `$cmd`;
 			chomp @output;
 
@@ -44,6 +58,7 @@ for($N=10;$N<=20;$N=$N+10){
 
 
 	my $outputFile2 = `rm -rf $N$txt`;
+
 }
 
 my $hostname = 'cwi.nl';
