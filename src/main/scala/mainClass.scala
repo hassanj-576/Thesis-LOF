@@ -36,7 +36,8 @@ object mainClass {
 		}
 
 		//Comment from stones	
-		println((t1-t0))	
+		println((t1-t0))
+		 Thread.sleep(5000000)	
 		sc.stop()
 		
 	}
