@@ -47,7 +47,7 @@ for($N=10;$N<=20;$N=$N+10){
 }
 
 my $hostname = 'cwi.nl';
-my $this_day = `date`;
+my $this_day = 'date';
 my $email = "hassan.jalil576\@gmail.com";
 my $to = "$email";
 my $from = "h.jalil\@$hostname";
@@ -57,8 +57,5 @@ open(MAIL, "|/usr/sbin/sendmail -t");
 print MAIL "To: $to\n";
 print MAIL "From: $from\n";
 print MAIL "Subject: $subject\n\n";
-print MAIL $message;
-close(MAIL);
-bject\n\n";
 print MAIL $message;
 close(MAIL);
