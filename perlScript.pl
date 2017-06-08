@@ -24,7 +24,7 @@ print { $OUTFILE } "N,iteration,Time,\n";
 
 my $txt=".csv";
 my $output="output"
-my $N=0
+my $N;
 for($N=10;$N<=20;$N=$N+10){
 	for($a=0;$a<3;$a=$a+1){
 			print { $OUTFILE } "$N,$a,";
