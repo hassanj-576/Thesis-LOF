@@ -28,13 +28,12 @@ object mainClass {
 		val t0 = System.nanoTime()
 		val lofWrapper = new LOFWrapper(faster,fileName,kList,sc,bucketWidth)
 		val lofVal = lofWrapper.getLOF()
-		val t1 = System.nanoTime()
-		var z=0
+				var z=0
 		for (x <- lofVal) {
 			x.sortBy(_._2).coalesce(1).saveAsTextFile(finalFolderName+z)
 			z=z+1
 		}
-
+		val t1 = System.nanoTime()
 		//Comment from stones	
 		println((t1-t0))
 		 //Thread.sleep(5000000)	
