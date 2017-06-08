@@ -16,14 +16,13 @@ object mainClass {
 	def main(args: Array[String]) {
 		val faster=args(0).toInt
 		val fileName=args(1)
-		//val k = args(1).toInt
 		val bucketWidth = args(2).toInt
+		val finalFolderName = args(3)
 		val kList= ArrayBuffer[Int]()
 		val k=10;
-		for ( a <- 3 to args.length-1){
+		for ( a <- 4 to args.length-1){
 			kList+=args(a).toInt
 		}
-		println( kList)
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
 		val t0 = System.nanoTime()
@@ -32,12 +31,12 @@ object mainClass {
 		val t1 = System.nanoTime()
 		var z=0
 		for (x <- lofVal) {
-			x.sortBy(_._2).coalesce(1).saveAsTextFile("newfile"+z+".txt")
+			x.sortBy(_._2).coalesce(1).saveAsTextFile(finalFolderName+z+)
 			z=z+1
 		}
 
 		//Comment from stones	
-		println("Over All Total Time : "+(t1-t0))	
+		println((t1-t0))	
 		sc.stop()
 		
 	}
