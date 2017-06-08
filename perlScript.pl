@@ -19,15 +19,15 @@ open $OUTFILE, '>>', $files
 	or croak "Cannot open $files: $OS_ERROR";
 
 
-my $bucketWidth=600;
+my $bucketWidth=400;
 print { $OUTFILE } "N,iteration,fast,Time,\n";
 
 my $txt=".csv";
 my $output="output";
 my $N;
-for($N=10;$N<=20;$N=$N+10){
+for($N=100;$N<=10000;$N=$N+100){
 	my $outputFile = `python dataGenerator.py $N$txt 1 $N 5`;
-	for($a=0;$a<3;$a=$a+1){
+	for($a=0;$a<1;$a=$a+1){
 			print { $OUTFILE } "$N,$a,0,";
 			my $cmd = "spark-submit --master local[*] --driver-memory 256g --class main.scala.mainClass target/scala-2.10/spark_proj-assembly-1.0.jar 0 $N$txt $bucketWidth $N$output 10 9 8 7 6";
 			my @output = `$cmd`;
@@ -41,7 +41,7 @@ for($N=10;$N<=20;$N=$N+10){
 			print { $OUTFILE } "\n";
 			my $outputFile2 = `rm -rf $N$output*`;
 	}
-	for($a=0;$a<3;$a=$a+1){
+	for($a=0;$a<1;$a=$a+1){
 			print { $OUTFILE } "$N,$a,1,";
 			my $cmd = "spark-submit --master local[*] --driver-memory 256g --class main.scala.mainClass target/scala-2.10/spark_proj-assembly-1.0.jar 1 $N$txt $bucketWidth $N$output 10 9 8 7 6";
 			my @output = `$cmd`;
