@@ -28,7 +28,7 @@ my $N;
 for($N=10;$N<=20;$N=$N+10){
 	for($a=0;$a<3;$a=$a+1){
 			print { $OUTFILE } "$N,$a,";
-			my $outputFile = `python datagenerator.py $N$txt 1 $N 5`;
+			my $outputFile = `python dataGenerator.py $N$txt 1 $N 5`;
 			my $cmd = "spark-submit --master local[*] --driver-memory 256g --class main.scala.mainClass target/scala-2.10/spark_proj-assembly-1.0.jar 0 $N$txt $bucketWidth $N$output 10 9 8 7 6";
 			my @output = `$cmd`;
 			chomp @output;
