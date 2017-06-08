@@ -38,7 +38,7 @@ for($N=10;$N<=20;$N=$N+10){
 					print { $OUTFILE } "$line"
 							or croak "Cannot write to $files: $OS_ERROR";
 			}
-			print { $OUTFILE } "\n"
+			print { $OUTFILE } "\n";
 			my $outputFile2 = `rm -rf $N$output*`;
 	}
 
