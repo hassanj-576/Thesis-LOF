@@ -31,7 +31,7 @@ object mainClass {
 		val t1 = System.nanoTime()
 		var z=0
 		for (x <- lofVal) {
-			x.sortBy(_._2).coalesce(1).saveAsTextFile(finalFolderName+z+)
+			x.sortBy(_._2).coalesce(1).saveAsTextFile(finalFolderName+z)
 			z=z+1
 		}
 
