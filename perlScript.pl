@@ -23,7 +23,7 @@ my $bucketWidth=600;
 print { $OUTFILE } "N,iteration,Time,\n";
 
 my $txt=".csv";
-my $output="output"
+my $output="output";
 my $N;
 for($N=10;$N<=20;$N=$N+10){
 	for($a=0;$a<3;$a=$a+1){
@@ -39,11 +39,11 @@ for($N=10;$N<=20;$N=$N+10){
 							or croak "Cannot write to $files: $OS_ERROR";
 			}
 			print { $OUTFILE } "\n"
-			my $outputFile2 = `rm -rf $N$output*`
+			my $outputFile2 = `rm -rf $N$output*`;
 	}
 
 
-	my $outputFile2 = `rm -rf $N$txt`
+	my $outputFile2 = `rm -rf $N$txt`;
 }
 
 my $hostname = 'cwi.nl';
