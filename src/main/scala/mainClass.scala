@@ -34,7 +34,8 @@ object mainClass {
 			z=z+1
 		}
 
-		//Comment from stones		
+		//Comment from stones
+		Thread.sleep(500000)		
 		sc.stop()
 		
 	}
