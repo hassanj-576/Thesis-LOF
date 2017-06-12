@@ -23,9 +23,9 @@ object mainClass {
 		for ( a <- 3 to args.length-1){
 			kList+=args(a).toInt
 		}
-		println( kList)
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
+		val t0 = System.nanoTime()
 		val lofWrapper = new LOFWrapper(fileName,kList,sc,bucketWidth)
 		val lofVal = lofWrapper.getLOF()
 		var z=0
@@ -33,7 +33,8 @@ object mainClass {
 			x.sortBy(_._2).coalesce(1).saveAsTextFile(outputFile+z)
 			z=z+1
 		}
-
+		val t1 = System.nanoTime()
+		println((t1-t0))
 		//Comment from stones
 		sc.stop()
 		
