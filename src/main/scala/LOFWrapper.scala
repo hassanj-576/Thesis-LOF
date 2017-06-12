@@ -13,13 +13,12 @@ import scala.collection.mutable.ArrayBuffer
 import org.apache.spark.storage.StorageLevel
 
 
-class LOFWrapper(faster:Int,fName:String,kPoints:ArrayBuffer[Int],sContext:SparkContext,bWidth:Int) {
+class LOFWrapper(fName:String,kPoints:ArrayBuffer[Int],sContext:SparkContext,bWidth:Int) {
 	
 	private var fileName = fName
 	private var kList =kPoints
 	private var sc=sContext
 	private var bucketWidth=bWidth
-	private var fasterCheck=faster
 
 	def getLOF():ArrayBuffer[RDD[(Long,Double)]]={
 		val sortedList=kList.sortWith(_ > _)

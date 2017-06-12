@@ -14,10 +14,10 @@ import scala.collection.mutable.ArrayBuffer
 
 object mainClass {
 	def main(args: Array[String]) {
-		val faster=args(0).toInt
-		val fileName=args(1)
+		val fileName=args(0)
 		//val k = args(1).toInt
-		val bucketWidth = args(2).toInt
+		val bucketWidth = args(1).toInt
+		val outputFile = args(2)
 		val kList= ArrayBuffer[Int]()
 		val k=10;
 		for ( a <- 3 to args.length-1){
@@ -26,11 +26,11 @@ object mainClass {
 		println( kList)
 		val conf = new SparkConf().setMaster("local").setAppName("My App")
 		val sc = new SparkContext(conf)
-		val lofWrapper = new LOFWrapper(faster,fileName,kList,sc,bucketWidth)
+		val lofWrapper = new LOFWrapper(fileName,kList,sc,bucketWidth)
 		val lofVal = lofWrapper.getLOF()
 		var z=0
 		for (x <- lofVal) {
-			x.sortBy(_._2).coalesce(1).saveAsTextFile("LOF"+z)
+			x.sortBy(_._2).coalesce(1).saveAsTextFile(outputFile+z)
 			z=z+1
 		}
 
