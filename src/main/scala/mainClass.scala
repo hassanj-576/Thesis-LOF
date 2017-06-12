@@ -35,7 +35,6 @@ object mainClass {
 		}
 
 		//Comment from stones
-		Thread.sleep(500000)		
 		sc.stop()
 		
 	}
