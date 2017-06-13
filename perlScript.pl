@@ -26,7 +26,7 @@ my $txt=".csv";
 my $output="output";
 my $N;
 for($N=100;$N<=200;$N=$N+100){
-	my $div = $N/4
+	my $div = $N/4;
 	my $outputFile = `python dataGenerator.py $N$txt 4 $div 5`;
 	for($a=0;$a<1;$a=$a+1){
 			print { $OUTFILE } "$N,$a,0,";
