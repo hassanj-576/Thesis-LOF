@@ -35,7 +35,7 @@ object mainClass {
 		}
 		val t1 = System.nanoTime()
 		//Comment from stones	
-		println((t1-t0)/1000000000)
+		println((t1-t0).toFloat/1000000000)
 		 //Thread.sleep(5000000)	
 		sc.stop()
 		
