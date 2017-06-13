@@ -25,7 +25,7 @@ print { $OUTFILE } "N,iteration,fast,Time,\n";
 my $txt=".csv";
 my $output="output";
 my $N;
-for($N=100;$N<=200;$N=$N+100){
+for($N=100;$N<=10000;$N=$N+100){
 	my $div = $N/4;
 	my $outputFile = `python dataGenerator.py $N$txt 4 $div 5`;
 	for($a=0;$a<1;$a=$a+1){
@@ -58,7 +58,7 @@ for($N=100;$N<=200;$N=$N+100){
 	}
 
 
-	#my $outputFile2 = `rm -rf $N$txt`;
+	my $outputFile2 = `rm -rf $N$txt`;
 
 }
 
