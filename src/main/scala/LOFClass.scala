@@ -27,8 +27,10 @@ class LOFClass () {
 		val dimension= denseVector.first().size
 		val denseRDDZipped = denseVector.map(values=>(values.toSparse)).zipWithIndex()
 		val finalVector =denseRDDZipped.map(values=>(values._2,values._1)) 
-		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(10).setSignatureLength(64).setBucketWidth(bucketWidth).train(finalVector)
+		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(1).setSignatureLength(64).setBucketWidth(bucketWidth).train(finalVector)
 		val neighbors = annModel.neighbors(minPoints)
+		errorNeighbors = neighbors.filter(values=> values._2.size<minPoints)
+		println("Error Values: "+minPoints)
 		neighbors
 	
 	}
