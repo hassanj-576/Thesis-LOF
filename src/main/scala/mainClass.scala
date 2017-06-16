@@ -23,7 +23,7 @@ object mainClass {
 		for ( a <- 4 to args.length-1){
 			kList+=args(a).toInt
 		}
-		val conf = new SparkConf().setMaster("local").setAppName("My App")
+		val conf = new SparkConf().setMaster("local[*]").setAppName("My App")
 		val sc = new SparkContext(conf)
 		val t0 = System.nanoTime()
 		val lofWrapper = new LOFWrapper(faster,fileName,kList,sc,bucketWidth)
