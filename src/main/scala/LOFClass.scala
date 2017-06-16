@@ -30,7 +30,7 @@ class LOFClass () {
 		val annModel =new ANN(dimensions = dimension, measure = "euclidean").setTables(1).setSignatureLength(64).setBucketWidth(bucketWidth).train(finalVector)
 		val neighbors = annModel.neighbors(minPoints)
 		val errorNeighbors = neighbors.filter(values=> values._2.size<minPoints)
-		println("Error Values: "+errorNeighbors.size)
+		println("Error Values: "+errorNeighbors.count)
 		neighbors
 	
 	}
