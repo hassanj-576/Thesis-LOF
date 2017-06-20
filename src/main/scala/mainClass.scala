@@ -23,7 +23,7 @@ object mainClass {
 		for ( a <- 3 to args.length-1){
 			kList+=args(a).toInt
 		}
-		val conf = new SparkConf().setMaster("local").setAppName("My App")
+		val conf = new SparkConf().setMaster("local[*]").setAppName("My App")
 		val sc = new SparkContext(conf)
 		val t0 = System.nanoTime()
 		val lofWrapper = new LOFWrapper(fileName,kList,sc,bucketWidth)
@@ -34,7 +34,7 @@ object mainClass {
 			z=z+1
 		}
 		val t1 = System.nanoTime()
-		println((t1-t0))
+		println((t1-t0).toFloat/1000000000)
 		//Comment from stones
 		sc.stop()
 		
