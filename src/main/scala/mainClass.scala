@@ -10,6 +10,8 @@ import com.opencsv.CSVReader;
 import com.github.karlhigley.spark.neighbors.ANN
 import org.apache.spark.rdd.RDD
 import scala.collection.mutable.ArrayBuffer
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
 
 
 object mainClass {
@@ -19,6 +21,10 @@ object mainClass {
 		val bucketWidth = args(1).toInt
 		val outputFile = args(2)
 		val kList= ArrayBuffer[Int]()
+
+		Logger.getLogger("org").setLevel(Level.ERROR)
+		Logger.getLogger("akka").setLevel(Level.ERROR)
+
 		val k=10;
 		for ( a <- 3 to args.length-1){
 			kList+=args(a).toInt
