@@ -4,7 +4,7 @@ use Carp;
 use English qw(-no_match_vars);
 
 
-my $files = 'outputLarge.csv';
+my $files = 'outputLargeNew.csv';
 if (-f $files) {
 	unlink $files
 		or croak "Cannot delete $files: $!";
@@ -25,7 +25,7 @@ print { $OUTFILE } "N,iteration,fast,Time,\n";
 my $txt=".csv";
 my $output="output";
 my $N;
-for($N=10000;$N<=100000;$N=$N+10000){
+for($N=60000;$N<=100000;$N=$N+10000){
 	my $div = $N/2;
 	my $outputFile = `python dataGenerator.py $N$txt 2 $div 1000`;
 	for($a=0;$a<1;$a=$a+1){
@@ -42,20 +42,20 @@ for($N=10000;$N<=100000;$N=$N+10000){
 			print { $OUTFILE } "\n";
 			my $outputFile2 = `rm -rf $N$output*`;
 	}
-	for($a=0;$a<1;$a=$a+1){
-			print { $OUTFILE } "$N,$a,1,";
-			my $cmd = "spark-submit --master local[*] --driver-memory 256g --class main.scala.mainClass target/scala-2.10/spark_proj-assembly-1.0.jar 1 $N$txt $bucketWidth $N$output 10 9 8 7 6";
-			my @output = `$cmd`;
-			chomp @output;
+	# for($a=0;$a<1;$a=$a+1){
+	# 		print { $OUTFILE } "$N,$a,1,";
+	# 		my $cmd = "spark-submit --master local[*] --driver-memory 256g --class main.scala.mainClass target/scala-2.10/spark_proj-assembly-1.0.jar 1 $N$txt $bucketWidth $N$output 10 9 8 7 6";
+	# 		my @output = `$cmd`;
+	# 		chomp @output;
 
-			foreach my $line (@output)
-			{
-					print { $OUTFILE } "$line"
-							or croak "Cannot write to $files: $OS_ERROR";
-			}
-			print { $OUTFILE } "\n";
-			my $outputFile2 = `rm -rf $N$output*`;
-	}
+	# 		foreach my $line (@output)
+	# 		{
+	# 				print { $OUTFILE } "$line"
+	# 						or croak "Cannot write to $files: $OS_ERROR";
+	# 		}
+	# 		print { $OUTFILE } "\n";
+	# 		my $outputFile2 = `rm -rf $N$output*`;
+	# }
 
 
 	my $outputFile2 = `rm -rf $N$txt`;
@@ -68,7 +68,7 @@ my $email = "hassan.jalil576\@gmail.com";
 my $to = "$email";
 my $from = "h.jalil\@$hostname";
 my $subject = "JOB COMPLETE - $this_day";
-my $message = "The Job Running on Stones02 is complete...";
+my $message = "The Job Running on Stones07 is complete...";
 open(MAIL, "|/usr/sbin/sendmail -t");
 print MAIL "To: $to\n";
 print MAIL "From: $from\n";
